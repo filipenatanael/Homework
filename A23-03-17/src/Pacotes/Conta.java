@@ -1,9 +1,9 @@
-package Pacote;
+package Pacotes;
 
 public class Conta {
     private int agencia;
     private int numero;
-    protected float saldo;
+    protected double saldo;
 	   
     public Conta(int agencia, int numero) {
 		this.agencia = agencia;
@@ -17,13 +17,13 @@ public class Conta {
     	}
     }
     
-    public void depositar(float valor){
-    	if(valor > 0){
-    		this.saldo = this.saldo + valor;
-    	}
-    }
+    public void depositar(double valor){
+	    	if(valor > 0){
+	    		this.saldo = this.saldo + valor;
+	    	}
+	}
     
-	public int getAgencia() {
+    public int getAgencia() {
 		return agencia;
 	}
 	public void setAgencia(int agencia) {
@@ -35,7 +35,7 @@ public class Conta {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public float getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 	
