@@ -1,9 +1,9 @@
 package Pacote;
 
 public class Conta {
-      private int agencia;
-      private int numero;
-      protected float saldo;
+    private int agencia;
+    private int numero;
+    protected float saldo;
 	   
     public Conta(int agencia, int numero) {
 		this.agencia = agencia;
