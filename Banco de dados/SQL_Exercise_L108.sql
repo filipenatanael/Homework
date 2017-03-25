@@ -1,0 +1,7 @@
+SELECT TOP 2 * FROM Conferente
+SELECT TOP 2 * FROM Unidade
+SELECT TOP 2 * FROM Cliente
+SELECT TOP 2 * FROM Pedido
+SELECT TOP 2 * FROM ItemPedido
+
+SELECT TOP 1 PERCENT * FROM Produto
