@@ -27,10 +27,42 @@ SELECT * FROM Produto
 /*
 Selecionar todos os registros da tabela de produtos. Observe o conteúdo do
 campo codigoForn. Responda: 
-1 – Por que esse campo está com esse conteúdo? Porque não associamos a chave estrangeira;
+1 – Por que esse campo está com esse conteúdo? Porque ao criar um campo sem definir conteúdo, esse é inicializado como NULL...
+O SQL Server inserirá automaticamente o valor NULL se nenhum dado for digitado e não houver padrão ou restrição DEFAULT na coluna ou no tipo de dados;
 
-2- O que deve ser feito para regularizar o banco? Deve ser realidar um acessiação dos registro a suas respequitivas chaves
+2- O que deve ser feito para regularizar o banco? Associar os fornecedores para cada produto correspondente.
 
 */
 
 
+/*
+(16) Definir os primeiros 400 produtos da tabela produto para o primeiro fornecedor
+cadastrado (Fornecedor de número 10). Verifique a alteração implementada.
+*/
+
+
+SELECT DISTINCT TOP 400 * FROM Produto
+
+UPDATE TOP(400) Produto SET codigoForm = 10
+
+SELECT * FROM Produto
+
+
+/*
+(17) Definir a partir do produto de código 401 até o produto de código 600 da tabela
+produto para o segundo fornecedor cadastrado (Fornecedor de número 15). Verifique
+a alteração implementada.
+*/
+
+
+UPDATE Produto SET codigoForm = 15 WHERE codigoPro BETWEEN 401 AND 600 
+
+SELECT * FROM Produto
+
+
+/*
+(18) Definir a partir do produto de código 601 até o final para o terceiro fornecedor
+cadastrado (Fornecedor de número 20). Verifique a alteração implementada.
+*/
+
+UPDATE Produto SET codigoForm = 20 WHERE codigoPro BETWEEN 601 AND (SELECT COUNT(*) FROM Produto)
