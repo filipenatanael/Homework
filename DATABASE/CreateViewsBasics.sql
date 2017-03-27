@@ -13,5 +13,5 @@ SELECT
 	 JOIN
 	   PRODUTOS ON PEDIDOS.IDProdutos = PRODUTOS.IDProdutos
 
-
+-- Testing VIEW
 SELECT * FROM uvwPessoasProdutos
