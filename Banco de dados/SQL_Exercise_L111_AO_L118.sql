@@ -76,6 +76,4 @@ Em ordem de código de fornecedor. Veja a imagem:
 
 -- SELECT  COUNT(*) AS "CODIGO DO FORNECEDOR"  FROM Produto  ORDER BY codigoForm
 
-SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm IN ('10','15','20')
-
-SELECT
+SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm = '10' OR codigoForm='15'
