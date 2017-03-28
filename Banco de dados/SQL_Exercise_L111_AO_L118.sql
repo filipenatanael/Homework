@@ -66,3 +66,16 @@ cadastrado (Fornecedor de número 20). Verifique a alteração implementada.
 */
 
 UPDATE Produto SET codigoForm = 20 WHERE codigoPro BETWEEN 601 AND (SELECT COUNT(*) FROM Produto)
+
+
+/*
+(19) Selecionar de forma agrupada a quantidade de produto por código de fornecedor.
+Em ordem de código de fornecedor. Veja a imagem:
+*/
+
+
+-- SELECT  COUNT(*) AS "CODIGO DO FORNECEDOR"  FROM Produto  ORDER BY codigoForm
+
+SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm IN ('10','15','20')
+
+SELECT
