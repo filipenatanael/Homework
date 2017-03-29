@@ -76,4 +76,11 @@ Em ordem de código de fornecedor. Veja a imagem:
 
 -- SELECT  COUNT(*) AS "CODIGO DO FORNECEDOR"  FROM Produto  ORDER BY codigoForm
 
-SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm = '10' OR codigoForm='15'
+-- SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm = '10' OR codigoForm='15'
+
+SELECT COUNT(DISTINCT codigoForm ) AS "Quantidade de destintos" FROM Produto
+
+
+SELECT codigoForm AS "CODIGO DO FORNECEDOR", COUNT(*) AS "TOTAL" 
+    FROM Produto GROUP BY codigoForm ORDER BY codigoForm
+
