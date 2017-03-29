@@ -84,10 +84,13 @@ SELECT codigoForm AS "CODIGO DO FORNECEDOR", COUNT(*) AS "TOTAL"
 fornecedor em ordem alfabética.
 */
 
-SELECT nome AS "SD" FROM Fornecedor
-UNION
-SELECT codigoForm AS "CODIGO DO FORNECEDOR", COUNT(*) AS "TOTAL" 
-    FROM Produto GROUP BY codigoForm ORDER BY codigoForm
+
+
+SELECT Fornecedor.nome AS "ASD", COUNT(*) AS "TOTAL"
+    FROM Produto LEFT JOIN Fornecedor ON Fornecedor.codigoForm = Produto.codigoForm 
+	GROUP BY Produto.codigoForm  ORDER BY Produto.codigoFormC
+	
+	
 	
 
 
