@@ -73,14 +73,18 @@ UPDATE Produto SET codigoForm = 20 WHERE codigoPro BETWEEN 601 AND (SELECT COUNT
 Em ordem de código de fornecedor. Veja a imagem:
 */
 
-
--- SELECT  COUNT(*) AS "CODIGO DO FORNECEDOR"  FROM Produto  ORDER BY codigoForm
-
--- SELECT COUNT(*) AS "CODIGO DO FORNECEDOR" FROM Produto WHERE codigoForm = '10' OR codigoForm='15'
-
-SELECT COUNT(DISTINCT codigoForm ) AS "Quantidade de destintos" FROM Produto
-
+-- SELECT COUNT(DISTINCT codigoForm ) AS "Quantidade de destintos" FROM Produto
 
 SELECT codigoForm AS "CODIGO DO FORNECEDOR", COUNT(*) AS "TOTAL" 
     FROM Produto GROUP BY codigoForm ORDER BY codigoForm
+
+
+/*
+(20) Executar o mesmo comando anterior, porém mostrando o nome de cada
+fornecedor em ordem alfabética.
+*/
+
+SELECT codigoForm AS "CODIGO DO FORNECEDOR", COUNT(*) AS "TOTAL" 
+    FROM Produto GROUP BY codigoForm ORDER BY codigoForm
+
 
