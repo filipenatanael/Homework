@@ -88,7 +88,7 @@ fornecedor em ordem alfabética.
 
 SELECT Fornecedor.nome AS "ASD", COUNT(*) AS "TOTAL"
     FROM Produto LEFT JOIN Fornecedor ON Fornecedor.codigoForm = Produto.codigoForm 
-	GROUP BY Produto.codigoForm  ORDER BY Produto.codigoFormC
+	GROUP BY Produto.codigoForm  ORDER BY Produto.codigoForm
 	
 	
 	
