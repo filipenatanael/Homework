@@ -5,6 +5,8 @@ public class Moto {
 	private String modelo;
 	private String cor;
 	private int marcha;
+	private int menorMarcha;
+	private int maiorMarcha;
 	
 	public Moto(String marca, String modelo, String cor, int marcha) {
 		this.marca = marca;
@@ -15,16 +17,21 @@ public class Moto {
 
 	
     public void marchaAcima(){
-    	this.marcha += 1;
+    	if(this.marcha < this.maiorMarcha){
+    		this.marcha += 1;
+    	}
     } 
     
     public void marchaAbaixo(){
-    	this.marcha -= 1;
+    	if(this.marcha > this.menorMarcha){
+    		this.marcha -= 1;
+    	}
     }
 
 
 	public void imprimir(){
 		System.out.print("Marca: "+this.marca+" Modelo: "+this.modelo+" Cor: "+this.cor+" Marcha: "+this.marcha);
+		System.out.print("Maior Marcha: "+this.maiorMarcha+" Menor Marcha: "+this.menorMarcha);
 	}
 	
 
