@@ -118,7 +118,6 @@ SELECT COUNT(codigoPro) AS "QUANTIDADE DE ITENS EM ESTOQUE", SUM(valorProduto). 
 /*
 (23) Executar a sentença SQL para mostrar o resultado a seguir:
 */
-
 SELECT (Cliente.nome+' '+Cliente.sobrenome) AS "CLIENTES DO PARANA COM PONTUAÇÃO SUPERIOR A 7", pontuacao AS "PONTUAÇÃO" FROM Cliente WHERE pontuacao>7
 
 
@@ -134,3 +133,21 @@ SELECT (nome+' '+sobrenome) AS "NOME COMPLETO", cidade AS CIDADE, estado AS ESTA
 (25) Produzir o mesmo resultado anterior usando a instrução LIKE.
 */
 SELECT (nome+' '+sobrenome) AS "NOME COMPLETO", cidade AS CIDADE, estado AS ESTADO FROM Cliente WHERE sobrenome LIKE '%SILVA%'
+
+
+/*
+(26) Mostrar os campos descrição e valor do produto para os produtos com valores
+entre 55,00 e 60,00. Use o operador between
+*/
+SELECT descricao AS "NOME DO PRODUTO", valorProduto AS "VALOR DO PRODUTO" FROM Produto WHERE valorProduto BETWEEN 55.00 AND 60.00
+
+
+/*
+(27) Mostrar o valor médio dos produtos (tabela produto)
+*/
+SELECT AVG(Produto.valorProduto) AS "VALOR MEDIO DOS PRODUTOS" FROM Produto
+
+
+
+
+
