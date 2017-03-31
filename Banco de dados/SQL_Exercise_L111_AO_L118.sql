@@ -122,4 +122,15 @@ SELECT COUNT(codigoPro) AS "QUANTIDADE DE ITENS EM ESTOQUE", SUM(valorProduto). 
 SELECT (Cliente.nome+' '+Cliente.sobrenome) AS "CLIENTES DO PARANA COM PONTUAÇÃO SUPERIOR A 7", pontuacao AS "PONTUAÇÃO" FROM Cliente WHERE pontuacao>7
 
 
+/*
+Mostrar o nome completo para todos os clientes com sobrenome iniciados com a
+palavra “silva”. Mostre o resultado conforme a imagem a seguir. Use a função de
+manipulação de strings: STRING(CAMPO, INICIO, TAMANHO).
+*/
 
+SELECT (nome+' '+sobrenome) AS "NOME COMPLETO", cidade AS CIDADE, estado AS ESTADO FROM Cliente WHERE sobrenome ='silva'
+
+/*
+(25) Produzir o mesmo resultado anterior usando a instrução LIKE.
+*/
+SELECT (nome+' '+sobrenome) AS "NOME COMPLETO", cidade AS CIDADE, estado AS ESTADO FROM Cliente WHERE sobrenome LIKE '%SILVA%'
