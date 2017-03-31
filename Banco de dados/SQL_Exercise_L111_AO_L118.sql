@@ -119,7 +119,7 @@ SELECT COUNT(codigoPro) AS "QUANTIDADE DE ITENS EM ESTOQUE", SUM(valorProduto). 
 (23) Executar a sentença SQL para mostrar o resultado a seguir:
 */
 
-SELECT nome AS "CLIENTES DO PARANA COM PONTUAÇÃO SUPERIOR A 7", pontuacao AS "PONTUAÇÃO" FROM Cliente WHERE pontuacao>7
+SELECT (Cliente.nome+' '+Cliente.sobrenome) AS "CLIENTES DO PARANA COM PONTUAÇÃO SUPERIOR A 7", pontuacao AS "PONTUAÇÃO" FROM Cliente WHERE pontuacao>7
 
 
 
