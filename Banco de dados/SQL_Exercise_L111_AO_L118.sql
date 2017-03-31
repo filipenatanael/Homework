@@ -148,6 +148,17 @@ SELECT descricao AS "NOME DO PRODUTO", valorProduto AS "VALOR DO PRODUTO" FROM P
 SELECT AVG(Produto.valorProduto) AS "VALOR MEDIO DOS PRODUTOS" FROM Produto
 
 
+/*
+(28) Mostrar os produtos com valores acima da média. Use select aninhado para essa
+questão.
+*/
 
 
+SELECT  AVG(valorProduto) FROM Produto  WHERE valorProduto IN (SELECT descricao as asa, valorProduto FROM Produto)
 
+-- SELECT * FROM cliente WHERE id_tipo IS NOT NULL AND id_cliente NOT IN ( SELECT id_cliente FROM cliente_devedor WHERE divida > 1000 )
+
+SELECT descricao, valorProduto FROM Produto
+  WHERE valorProduto >
+     (SELECT AVG(valorProduto)  FROM Produto
+      )
