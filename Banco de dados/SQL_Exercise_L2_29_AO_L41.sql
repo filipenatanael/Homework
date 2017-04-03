@@ -71,3 +71,39 @@ dessa tabela.
 SELECT COUNT(*) FROM MaterialGeral
 SP_HELP MaterialGeral
 
+
+
+/*
+(33) Popular a tabela materialGeral incluindo 1.500.000 (Um Milhão e Quinhentos mil)
+registros nessa tabela. Veja o exemplo no material teórico (Teoria_Parte III). Observe
+que o campo total é um campo calculado, será gerado automaticamente baseado nos
+valores do campo quantidade e do campo valor.
+*/
+
+
+DECLARE @tempoInicial DATETIME, @contador INT, @tempoFinal DATETIME
+DECLARE @descricaoMaterial VARCHAR(60)
+DECLARE @quantidadeMaterial INT
+DECLARE @valorMaterial FLOAT 
+
+
+SET @descricaoMaterial = 'DESCRICAO'
+SET @quantidadeMaterial = 45
+SET @valorMaterial = 75
+
+
+SET @tempoInicial = GETDATE()
+SET @contador = -1
+WHILE (@contador < 5)
+   BEGIN
+   INSERT INTO MaterialGeral(descricao,quantidade,valor) VALUES(@descricaoMaterial,@quantidadeMaterial,@valorMaterial)
+   SET @contador = @contador +1
+   END
+SET @tempoFinal = GETDATE()
+
+
+PRINT 'TEMPO INICIAL: '+CAST(@tempoInicial AS VARCHAR)
+PRINT 'TEMPO FINAL: '+CAST(@tempoFinal AS VARCHAR)
+
+-- CHECANDO INSERT DE DADOS
+SELECT * FROM MaterialGeral
