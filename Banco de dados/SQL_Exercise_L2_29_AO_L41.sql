@@ -63,3 +63,11 @@ ELSE
 END
 
 
+/*
+(32) Contar a quantidade de registros da tabela materialGeral. Verificar a estrutura
+dessa tabela.
+*/
+
+SELECT COUNT(*) FROM MaterialGeral
+SP_HELP MaterialGeral
+
