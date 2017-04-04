@@ -94,7 +94,7 @@ SET @valorMaterial = 75
 
 SET @tempoInicial = GETDATE()
 SET @contador = -1
-WHILE (@contador < 5)
+WHILE (@contador < 1500000)
    BEGIN
    INSERT INTO MaterialGeral(descricao,quantidade,valor) VALUES(@descricaoMaterial,@quantidadeMaterial,@valorMaterial)
    SET @contador = @contador +1
@@ -106,4 +106,4 @@ PRINT 'TEMPO INICIAL: '+CAST(@tempoInicial AS VARCHAR)
 PRINT 'TEMPO FINAL: '+CAST(@tempoFinal AS VARCHAR)
 
 -- CHECANDO INSERT DE DADOS
-SELECT * FROM MaterialGeral
+SELECT COUNT(*) FROM MaterialGeral
