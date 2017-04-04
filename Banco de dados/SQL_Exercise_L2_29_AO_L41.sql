@@ -105,5 +105,58 @@ SET @tempoFinal = GETDATE()
 PRINT 'TEMPO INICIAL: '+CAST(@tempoInicial AS VARCHAR)
 PRINT 'TEMPO FINAL: '+CAST(@tempoFinal AS VARCHAR)
 
--- CHECANDO INSERT DE DADOS
+/*
+(34) Contar a quantidade de registros da tabela materialGeral. Verificar O conteúdo
+dessa tabela.
+*/
+
 SELECT COUNT(*) FROM MaterialGeral
+SELECT * FROM MaterialGeral
+
+/*
+(35) Executar (copiar/colar/executar) o Script de alteração da tabela materialGeral.
+Nome: Script_Adicional_Tabela_MaterialGeral.TXT
+*/
+
+
+DECLARE @descricao VARCHAR(60), @quantidade INT, @valor float
+SET @descricao = 'DESCRICAO: '
+SET @quantidade = 2
+SET @valor = 10
+DECLARE @contador INT
+SET @contador = 1
+DECLARE @tempoInicial DATETIME
+SET @tempoInicial = GETDATE()
+WHILE (@contador <= 1000000)
+   BEGIN
+       IF (@contador <= 100000)
+	      INSERT INTO MaterialGeral VALUES ('XX_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 
+	   ELSE IF (@contador > 100000 and @contador <= 400000)
+	      INSERT INTO MaterialGeral VALUES ('TT_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 
+	   ELSE IF (@contador > 400000 and @contador <= 600000)
+	      INSERT INTO MaterialGeral VALUES ('AA_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 
+	   ELSE IF (@contador > 600000 and @contador <= 800000)
+	      INSERT INTO MaterialGeral VALUES ('RR_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 
+       ELSE IF (@contador > 800000 and @contador <= 900000)
+	      INSERT INTO MaterialGeral VALUES ('DD_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 	   
+       ELSE 
+	      INSERT INTO MaterialGeral VALUES ('BB_PRODUTO: '+CAST(@contador AS VARCHAR), @quantidade, @valor)                 
+
+	   SET @contador = @contador + 1
+
+   END
+DECLARE @tempoFinal DATETIME
+SET @tempoFinal= GETDATE()
+PRINT '---------------'
+PRINT 'Tempo inicial: '+CONVERT(VARCHAR(25), @tempoInicial)
+PRINT 'Tempo Final..: '+CONVERT(VARCHAR(25), @tempoFinal)
+PRINT '---------------'
+
+/*
+(36) Contar a quantidade de registros cadastrados agrupados por descrição do
+produto e ordenados por descrição. Anote o tempo de resposta para essa operação.
+Veja o Exemplo:
+*/
+
+SELECT descricao AS 'DESCRICAO', COUNT(*) AS 'QUANTIDADE' FROM MaterialGeral
+GROUP BY descricao ORDER BY descricao
