@@ -1,3 +1,5 @@
+-- CREATE AN FUNCTION
+
 CREATE FUNCTION CompleteCPF
 (
     @Tamanho INT,
