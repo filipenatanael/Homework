@@ -24,8 +24,6 @@ public class ReservaPassagemAerea {
 	ListRegisteredVOO(); 
 	}
 	
-
-	
 	while (true) {
 	try {
 	opcao1 = Integer.parseInt(JOptionPane.showInputDialog(
@@ -33,12 +31,10 @@ public class ReservaPassagemAerea {
 	+ "1 - Consulta\n"
 	+ "2 - Reservar\n"
 	+ "3 - Finalizar\n\n"));
-	
+
 	if (opcao1 == 1) {
-	// MENU CONSULTAR
 	while (true) {
 	try {
-	// MENU CONSULTAR
 	opcao2 = Integer.parseInt(JOptionPane.showInputDialog(
 	"CONSULTAR VÔOS \n\n"
 	+ "1 - Por  número  do  vôo\n"
@@ -47,7 +43,6 @@ public class ReservaPassagemAerea {
 	+ "5 - Voltar\n\n"));
 	if (opcao2 == 1) {
 	opcao = Integer.parseInt(JOptionPane.showInputDialog("CONSULTAR VÔO POR NÚMERO DO VÔO\n\n" + "Informe o número do vôo"));
-	//if (opcao < 1 || opcao > 3) {
 	if (opcao < 1 || opcao > voo.length) {
 	JOptionPane.showMessageDialog(null, "Número do vôo Inexistente");
 	} else {
@@ -61,31 +56,29 @@ public class ReservaPassagemAerea {
 	}
 	}
 	} // FIM DA OPÇÃO 1
+	
 	if (opcao2 == 2) {
 	sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR ORIGEM DO VÔO\n\n" + "Informe a origem");
 	Boolean verOrigem = true;
-	//verOrigem = verVPO(sopcao);
 	if (verVPO(sopcao) == false)
 	JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique","Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
 	else {
-	for (int variavelFor = 0; variavelFor <= 2; variavelFor++) {
-	if (origem[variavelFor].equalsIgnoreCase(sopcao)) {	
-	String resultado = "Vôo: " + voo[variavelFor] + "\n" + "Origem: "
-	+ origem[variavelFor] + "\n" + "Destino: "+ destino[variavelFor] 
-	+ "\n" + "Lugares: " + lugares[variavelFor];
+	for (int i = 0; i <= 2; i++) {
+	if (origem[i].equalsIgnoreCase(sopcao)) {	
+	String resultado = "Vôo: " + voo[i] + "\n" + "Origem: "
+	+ origem[i] + "\n" + "Destino: "+ destino[i] 
+	+ "\n" + "Lugares: " + lugares[i];
 	JOptionPane.showMessageDialog(null, resultado);	
-	} // FIM DO IF
-	} // FIM DA ITERAÇÃO FOR VARIAVELFOR
-	} // FIM DO ELSE IF
 	}
+	} 
+	} 
+	}
+	
 	if (opcao2 == 3) {
-	sopcao = JOptionPane
-	.showInputDialog("CONSULTAR VÔO POR DESTINO DO VÔO\n\n" + "Informe a origem");
+	sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR DESTINO DO VÔO\n\n" + "Informe a origem");
 	Boolean verDestino = true;
-	verDestino = verVPD(sopcao);
-	if (verDestino == false)
-	JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique",
-	"Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
+	if (verVPD(sopcao) == false)
+	JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique","Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
 	else {
 	for (int i = 0; i <= 2; i++) {
 	if (destino[i].equalsIgnoreCase(sopcao)) {	
@@ -93,9 +86,9 @@ public class ReservaPassagemAerea {
 	+ origem[i] + "\n" + "Destino: "+ destino[i] 
 	+ "\n" + "Lugares: " + lugares[i];
 	JOptionPane.showMessageDialog(null, resultado);	
-	} // FIM DO IF
-	} // FIM DA ITERAÇÃO FOR VARIAVELFOR
-	} // FIM DO ELSE IF
+	}
+	} 
+	}
 	}
 	
 	if (opcao2 == 4) {
@@ -105,12 +98,12 @@ public class ReservaPassagemAerea {
 	break;
 	}
 	} catch (Exception e) {
-	JOptionPane.showMessageDialog(null,
-	"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
+	JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
 	break;
 	}
-	} // while Consultar
-	} // fim opcao 1
+	}
+	
+	} 
 	if (opcao1 == 2) {
 	JOptionPane.showMessageDialog(null, "OPÇÃO 2 - RESERVA \nOpção em desenvolvimento ...");
 	}
@@ -118,11 +111,10 @@ public class ReservaPassagemAerea {
 	break;
 	}
 	} catch (Exception e) {
-	JOptionPane.showMessageDialog(null,
-	"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
+	JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
 	break;
 	}
-    } // while geral
+    }
 	System.out.println("\n\nPROGRAMA FINALIZADO!");
 	}
 
@@ -177,5 +169,5 @@ public class ReservaPassagemAerea {
 								}
 							return false;
 									}
-} // class
+}
 
