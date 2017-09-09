@@ -155,16 +155,16 @@ public class ReservaPassagemAerea {
 	}
 
 	private static Boolean verVPO(String args) {
-	for (int variavelFor = 0; variavelFor <= 2; variavelFor++) {
-		if (origem[variavelFor].equalsIgnoreCase(sopcao))
+	for (int i = 0; i <= 2; i++) {
+		if (origem[i].equalsIgnoreCase(sopcao))
 				return true;
 					}
 					return false;
 							}
 
 	private static Boolean verVPD(String args) {
-		for (int variavelFor = 0; variavelFor <= 2; variavelFor++) {
-			if (destino[variavelFor].equalsIgnoreCase(sopcao))
+		for (int i = 0; i <= 2; i++) {
+			if (destino[i].equalsIgnoreCase(sopcao))
 				return true;
 								}
 							return false;

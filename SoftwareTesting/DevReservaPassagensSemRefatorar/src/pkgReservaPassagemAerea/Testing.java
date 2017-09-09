@@ -18,6 +18,7 @@ public class Testing {
     
     int opcao1;
     String sopcao;
+    int opcao;
     do{
     	try{
     		opcao1 = Integer.parseInt(JOptionPane.showInputDialog(
@@ -40,6 +41,12 @@ public class Testing {
     							+ "5 - Voltar\n\n"));
     					switch(opcao2){
     					case 1:
+    						opcao = Integer.parseInt(JOptionPane.showInputDialog("CONSULTAR VÔO POR NÚMERO DO VÔO\n\n" + "Informe o número do vôo"));
+    						if (opcao < 1 || opcao > ListaDeVoo.size()) {
+    						JOptionPane.showMessageDialog(null, "Número do vôo Inexistente");
+    						} else {
+    							JOptionPane.showMessageDialog(null, ListaDeVoo.get(opcao).toString());
+    						}
     		    			break;
     					case 2:
     						sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR ORIGEM DO VÔO\n\n" + "Informe a origem");
@@ -95,12 +102,7 @@ public class Testing {
     		}
     }while(true);
     
-    
-    
-    
-    
-		
-		
+
 	}
 
 	public static void ListRegisteredVOO() {
