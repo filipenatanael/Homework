@@ -16,6 +16,59 @@ public class Testing {
     	ListRegisteredVOO();
     }
     
+    int opcao1;
+    do{
+    	try{
+    		opcao1 = Integer.parseInt(JOptionPane.showInputDialog(
+    				"OPÇÕES\n\n"
+    				+ "1 - Consulta\n"
+    				+ "2 - Reservar\n"
+    				+ "3 - Finalizar\n\n"));
+    		
+    		switch(opcao1){
+    		case 1:
+    			int opcao2;
+    			do{
+    				try{
+    					opcao2 = Integer.parseInt(JOptionPane.showInputDialog(
+    							"CONSULTAR VÔOS \n\n"
+    							+ "1 - Por  número  do  vôo\n"
+    							+ "2 - Por  Origem\n3 - Por Destino\n"
+    							+ "4 - Consulta Geral\n"
+    							+ "5 - Voltar\n\n"));
+    					switch(opcao2){
+    					case 1:
+    		    			break;
+    					case 2:
+    		    			break;
+    					case 3:
+    		    			break;
+    					case 4:
+    		    			break;
+    					case 5:
+    		    			break;
+    		    		default:
+    		    			System.out.print("This option does not exist...");
+    					}
+    				}catch (Exception e) {
+    					JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
+    				}
+    			}while(true);
+    			//break;
+    		case 2:
+    			break;
+    		case 3:
+    			break;
+    		default:
+    			System.out.println("This option does not exist...");
+    		}
+    		
+    	}catch (Exception e) {
+    		JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
+    		break;
+    		}
+    }while(true);
+    
     
     
     
