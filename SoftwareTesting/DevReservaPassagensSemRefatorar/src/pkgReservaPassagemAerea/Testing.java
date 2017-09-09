@@ -17,6 +17,7 @@ public class Testing {
     }
     
     int opcao1;
+    String sopcao;
     do{
     	try{
     		opcao1 = Integer.parseInt(JOptionPane.showInputDialog(
@@ -28,6 +29,7 @@ public class Testing {
     		switch(opcao1){
     		case 1:
     			int opcao2;
+    			boolean bool = true;
     			do{
     				try{
     					opcao2 = Integer.parseInt(JOptionPane.showInputDialog(
@@ -40,12 +42,36 @@ public class Testing {
     					case 1:
     		    			break;
     					case 2:
+    						sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR ORIGEM DO VÔO\n\n" + "Informe a origem");
+    						Boolean verOrigem = false;	
+    						for(Voo item: ListaDeVoo){
+   							 if(item.getOrigem().equalsIgnoreCase(sopcao)){
+   								 JOptionPane.showMessageDialog(null, item.toString());
+   								 verOrigem = true;
+   							 }
+   						    }
+    						if(!verOrigem){
+    							JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique","Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
+    						}
     		    			break;
     					case 3:
+    						sopcao = JOptionPane.showInputDialog("CONSULTAR VÔO POR DESTINO DO VÔO\n\n" + "Informe a origem");
+    						Boolean verDestino = false;
+    						for(Voo item: ListaDeVoo){
+    							 if(item.getDestino().equalsIgnoreCase(sopcao)){
+    								 JOptionPane.showMessageDialog(null, item.toString());
+    								 verDestino = true;
+    							 }
+    						 }
+    						if(!verDestino){
+    							JOptionPane.showMessageDialog(null, "Origem não cadastrada no programa. Verifique","Mensagem do Sistema", JOptionPane.INFORMATION_MESSAGE);
+    						}
     		    			break;
     					case 4:
+    						ListRegisteredVOO();
     		    			break;
     					case 5:
+    						bool = false;
     		    			break;
     		    		default:
     		    			System.out.print("This option does not exist...");
@@ -53,7 +79,7 @@ public class Testing {
     				}catch (Exception e) {
     					JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
     				}
-    			}while(true);
+    			}while(bool);
     			//break;
     		case 2:
     			break;
@@ -72,7 +98,7 @@ public class Testing {
     
     
     
-   
+    
 		
 		
 	}
