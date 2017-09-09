@@ -144,10 +144,7 @@ public class ReservaPassagemAerea {
     } // while geral
 	System.out.println("\n\nPROGRAMA FINALIZADO!");
 	}
-	// main
-	// VERIFICA SE HÁ VÔO PARA A ORIGEM INFORMADA PELO USUÁRIO
-	// OU SEJA: VERVPO (VERIFICA VÔO POR ORIGEM) O PARÂMETRO
-	// ARGS É O NOME DA CIDADE DE ORIGEM. ENTENDEU?
+
 	private static Boolean verVPO(String args) {
 	for (int variavelFor = 0; variavelFor <= 2; variavelFor++) {
 		if (origem[variavelFor].equalsIgnoreCase(sopcao))
@@ -155,9 +152,7 @@ public class ReservaPassagemAerea {
 					}
 					return false;
 							}
-	// VERIFICA SE HÁ VÔO PARA O DESTINO INFORMADO PELO USUÁRIO
-	// OU SEJA: VERVPD (VERIFICA VÔO POR DESTINO) O PARÂMETRO
-	// ARGS É O NOME DA CIDADE DE DESTINO. ENTENDEU?
+
 	private static Boolean verVPD(String args) {
 		for (int variavelFor = 0; variavelFor <= 2; variavelFor++) {
 			if (destino[variavelFor].equalsIgnoreCase(sopcao))
