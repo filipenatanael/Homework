@@ -44,7 +44,7 @@ public class Voo {
 
 	@Override
 	public String toString() {
-		return "Voo: " + voo + " Origem: " + origem + " Destino: " + destino + " Lugares: " + lugares;
+		return "\n" + voo + "\t" + origem + "\t" + destino + "\t" + lugares;
 	}
 	
 	
