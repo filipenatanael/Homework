@@ -15,38 +15,17 @@ public class ReservaPassagemAerea {
 	static String destino[];
 	static int lugares[];
 	static String dadosVoo = "";
+	
 	public static void main(String[] args) {
-	voo = new int[3];
-	origem = new String[3];
-	destino = new String[3];
-	lugares = new int[3];
-	voo[0] = 1;
-	origem[0] = "BHTE";
-	destino[0] = "SÃO PAULO";
-	lugares[0] = 20;
-	dadosVoo = dadosVoo + "\n" + voo[0] + "\t"
-	+ origem[0] + "\t" + destino[0] + "\t" + lugares[0];
-	voo[1] = 2;
-	origem[1] = "SÃO PAULO";
-	destino[1] = "CURITIBA";
-	lugares[1] = 25;
-	dadosVoo = dadosVoo + "\n" + voo[1] + "\t"
-	+ origem[1] + "\t" + destino[1] + "\t" + lugares[1];
-	voo[2] = 3;
-	origem[2] = "CURITIBA";
-	destino[2] = "JOINVILLE";
-	lugares[2] = 15;
-	dadosVoo = dadosVoo + "\n" + voo[2] + "\t"
-	+ origem[2] + "\t" + destino[2] + "\t" + lugares[2];
-	int resposta = JOptionPane.showConfirmDialog(null, "Deseja verificar dados?", "Confirmação do programa",
-	JOptionPane.YES_NO_OPTION);
-	if (resposta == JOptionPane.YES_OPTION) {
-	JTextArea saida = new JTextArea(10, 40);
-	saida.setText("Nro\tOrigem\tDestino\tPassageiros");
-	saida.append(dadosVoo);
-	JScrollPane scroll = new JScrollPane(saida);
-	JOptionPane.showMessageDialog(null, scroll, "Dados dos vôos: ", JOptionPane.INFORMATION_MESSAGE); }
-	// MENU GERAL
+     
+	CadTestVOO();
+		
+	if (JOptionPane.showConfirmDialog(null, "Deseja verificar dados?", "Confirmação do programa",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+	ListRegisteredVOO(); 
+	}
+	
+
+	
 	while (true) {
 	try {
 	// MENU GERAL
@@ -114,11 +93,7 @@ public class ReservaPassagemAerea {
 	} // FIM DO ELSE IF
 	}
 	if (opcao2 == 4) {
-	JTextArea saida = new JTextArea(10, 40);
-	saida.setText("Nro\tOrigem\tDestino\tPassageiros");
-	saida.append(dadosVoo);
-	JScrollPane scroll = new JScrollPane(saida);
-	JOptionPane.showMessageDialog(null, scroll, "Dados dos vôos: ", JOptionPane.INFORMATION_MESSAGE);
+	ListRegisteredVOO();
 	}
 	if (opcao2 == 5) {
 	break;
@@ -143,6 +118,42 @@ public class ReservaPassagemAerea {
 	}
     } // while geral
 	System.out.println("\n\nPROGRAMA FINALIZADO!");
+	}
+
+	public static void ListRegisteredVOO() {
+		JTextArea saida = new JTextArea(10, 40);
+		saida.setText("Nro\tOrigem\tDestino\tPassageiros");
+		saida.append(dadosVoo);
+		JScrollPane scroll = new JScrollPane(saida);
+		JOptionPane.showMessageDialog(null, scroll, "Dados dos vôos: ", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+	public static void CadTestVOO() {
+		voo = new int[3];
+		origem = new String[3];
+		destino = new String[3];
+		lugares = new int[3];
+		
+		voo[0] = 1;
+		origem[0] = "BHTE";
+		destino[0] = "SÃO PAULO";
+		lugares[0] = 20;
+		dadosVoo = dadosVoo + "\n" + voo[0] + "\t"
+		+ origem[0] + "\t" + destino[0] + "\t" + lugares[0];
+		
+		voo[1] = 2;
+		origem[1] = "SÃO PAULO";
+		destino[1] = "CURITIBA";
+		lugares[1] = 25;
+		dadosVoo = dadosVoo + "\n" + voo[1] + "\t"
+		+ origem[1] + "\t" + destino[1] + "\t" + lugares[1];
+		
+		voo[2] = 3;
+		origem[2] = "CURITIBA";
+		destino[2] = "JOINVILLE";
+		lugares[2] = 15;
+		dadosVoo = dadosVoo + "\n" + voo[2] + "\t"
+		+ origem[2] + "\t" + destino[2] + "\t" + lugares[2];
 	}
 
 	private static Boolean verVPO(String args) {
