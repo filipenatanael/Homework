@@ -71,21 +71,7 @@ public class ReservaPassagemAerea {
 	+ origem[variavelFor] + "\n" + "Destino: "+ destino[variavelFor] 
 	+ "\n" + "Lugares: " + lugares[variavelFor];
 	JOptionPane.showMessageDialog(null, resultado);
-    } // FIM DO IF
-	// Não excluir esse código -
-	// verificação origem
-	// Autor: Pangrácio - 12/11/2015
-	// if (voo[variavelFor] ==
-	// (opcao-1)) {
-	// String resultado = "Vôo:
-	// "+voo[variavelFor] + "\n" +
-	// "Origem: "+origem[variavelFor] +
-	// "\n" + "Destino:
-	// "+destino[variavelFor] + "\n" +
-	// "Lugares: "+lugares[variavelFor];
-	// JOptionPane.showMessageDialog(null,
-	// resultado);
-	// } // FIM DO IF
+    }
 	} // FIM DA ITERAÇÃO FOR VARIAVELFOR
 	} // FIM DO ELSE
 	} // FIM DA OPÇÃO 1
