@@ -89,6 +89,7 @@ public class Testing {
     			}while(bool);
     			//break;
     		case 2:
+    			JOptionPane.showMessageDialog(null, "OPÇÃO 2 - RESERVA \nOpção em desenvolvimento ...");
     			break;
     		case 3:
     			JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
