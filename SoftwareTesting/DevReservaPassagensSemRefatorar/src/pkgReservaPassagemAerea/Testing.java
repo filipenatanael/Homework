@@ -91,6 +91,8 @@ public class Testing {
     		case 2:
     			break;
     		case 3:
+    			JOptionPane.showMessageDialog(null,"\nTecla cancelar foi acionada\nou um erro inesperado ocorreu. \nO programa será finalizado");
+    			System.exit(0);
     			break;
     		default:
     			System.out.println("This option does not exist...");
