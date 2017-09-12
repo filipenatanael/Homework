@@ -12,15 +12,18 @@ namespace EntityConsulta
         {
 
             //Inicializar();
-
+            /*
             var aluno = new Aluno() { Nome = "Jose Antonio", DataNascimento = new DateTime(1979, 06, 27), ValorMensalidade = 2000, TurmaId = 2};
             var ctx = new Contexto();
             ctx.Alunos.Add(aluno);
             ctx.SaveChanges();
+            */
 
+            Alterando();
 
         }
-        static void Inicializar() {
+        static void Inicializar()
+        {
 
             var turma = new Turma(){Nome = "ADSBPAN2B"};
 
@@ -41,6 +44,13 @@ namespace EntityConsulta
             var ctx = new Contexto();
             ctx.Turmas.Add(turma);
 
+            ctx.SaveChanges();
+        }
+        static void Alterando()
+        {
+            var ctx = new Contexto();
+            Aluno aluno = ctx.Alunos.Single(p => p.Id == 4);
+            aluno.ValorMensalidade = 3000;
             ctx.SaveChanges();
         }
   
