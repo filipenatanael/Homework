@@ -26,7 +26,68 @@ SELECT * FROM Cliente WHERE estado = 'MG' AND sexo = 'F' AND cidade = 'Belo Hori
 SELECT @@rowcount
 SET NOCOUNT OFF
 
+--  ATIVIDADE 56
+
+SELECT pedido.numeroPed, pedido.valorTotal FROM Pedido
+SELECT * FROM ItemPedido WHERE numeroPed = 10 OR numeroPed = 12
+
+--  ATIVIDADE 57
+
+CREATE PROCEDURE REGULARIZAR @numeroPedido INT
+AS
+BEGIN 
+   DECLARE @ValorTotal DECIMAL(10,2)
+   SET @ValorTotal = 0
+   
+   DECLARE @QuantidadeTotal INT
+   SET @QuantidadeTotal = 0
+
+   SET @QuantidadeTotal = (SELECT SUM(quantidade) FROM ItemPedido WHERE numeroPed = @numeroPedido)
+   SET @ValorTotal = (SELECT SUM(valor * quantidade - desconto) FROM ItemPedido WHERE numeroPed = @numeroPedido)
+
+   
+   UPDATE Pedido SET valorTotal = @ValorTotal WHERE numeroPed = @numeroPedido
+   END
+   GO
+
+
+
+
 */
+
+
+CREATE PROCEDURE REGULARIZAR @numeroPedido INT
+AS
+BEGIN 
+   DECLARE @ValorTotal DECIMAL(10,2)
+   SET @ValorTotal = 0
+   
+   DECLARE @QuantidadeTotal INT
+   SET @QuantidadeTotal = 0
+
+   SET @QuantidadeTotal = (SELECT SUM(quantidade) FROM ItemPedido WHERE numeroPed = @numeroPedido)
+   SET @ValorTotal = (SELECT SUM(valor * quantidade - desconto) FROM ItemPedido WHERE numeroPed = @numeroPedido)
+
+   
+   UPDATE Pedido SET valorTotal = @ValorTotal WHERE numeroPed = @numeroPedido
+   END
+   GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
