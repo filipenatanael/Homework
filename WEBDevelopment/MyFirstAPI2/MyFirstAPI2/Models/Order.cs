@@ -5,17 +5,17 @@ using System.Web;
 
 namespace MyFirstAPI2.Models
 {
-    public class Laboratory
+    public class Order
     {
 
-        public Laboratory() {
+        public Order() {
              
         }
         
         public int Id { get; set; }
    
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public List<Software> listOfSoftwares { get; set; }
+        public List<Customer> listOfOrders { get; set; }
     }
 }
