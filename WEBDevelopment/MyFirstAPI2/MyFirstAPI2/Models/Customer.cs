@@ -10,7 +10,7 @@ namespace MyFirstAPI2.Models
 
         public Customer()
         {
-            listOfOrders = new List<Order>();
+            ListOfOrders = new List<Order>();
         }
         
         public int Id { get; set; }
@@ -19,7 +19,7 @@ namespace MyFirstAPI2.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
 
-        public List<Order> listOfOrders { get; set; }
+        public List<Order> ListOfOrders { get; set; }
 
        
 
