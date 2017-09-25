@@ -8,14 +8,11 @@ namespace MyFirstAPI2.Models
     public class Order
     {
 
-        public Order() {
-             
-        }
-        
         public int Id { get; set; }
-   
         public string Name { get; set; }
 
-        public List<Customer> listOfOrders { get; set; }
+        public int CustomerId { get; set; }
+
+        public Customer Customer { get; set; }
     }
 }

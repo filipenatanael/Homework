@@ -13,10 +13,15 @@ namespace MyFirstAPI2.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
 
-        public int OrderId { get; set; }
 
-        public Order Order { get; set; }
+
+        public List<Order> listOfOrders { get; set; }
+
+       
 
 
     }
 }
+
+//public int OrderId { get; set; }
+// public Order Order { get; set; }
