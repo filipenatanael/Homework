@@ -11,6 +11,8 @@ namespace MyFirstAPI2
     {
         public Contexto() : base("DadosConexao") { }
 
-        
+        public DbSet<Software> Softwares { get; set; }
+
+        public DbSet<Laboratory> Laboratories { get; set; }
     }
 }
