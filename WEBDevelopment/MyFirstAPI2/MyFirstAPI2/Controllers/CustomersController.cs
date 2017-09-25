@@ -17,6 +17,8 @@ namespace MyFirstAPI2.Controllers
     {
         private Contexto db = new Contexto();
 
+       
+
         // GET: api/Customers
         public IQueryable<Customer> GetCustomers()
         {
