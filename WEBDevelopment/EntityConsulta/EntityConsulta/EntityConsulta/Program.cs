@@ -11,7 +11,7 @@ namespace EntityConsulta
         static void Main(string[] args)
         {
 
-            //Inicializar();
+            Inicializar();
             /*
             var aluno = new Aluno() { Nome = "Jose Antonio", DataNascimento = new DateTime(1979, 06, 27), ValorMensalidade = 2000, TurmaId = 2};
             var ctx = new Contexto();
@@ -19,7 +19,7 @@ namespace EntityConsulta
             ctx.SaveChanges();
             */
 
-            Alterando();
+           // Alterando();
 
         }
         static void Inicializar()
