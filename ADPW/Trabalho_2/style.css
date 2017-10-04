@@ -1,71 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Sans-serif;
+}
 
-	*{
-		margin: 0;
-		padding: 0;
-    font-family: Sans-serif;
+body{
+	background-color: #D8D8D8;
+	font-family: 'Sans-serif';
+}
+
+
+.navigation {
+	width: 1200px;
+	height: 1000px;
+	margin: 20px auto;
+	background-color: #fff;
+	position: relative;
+}
+
+.navigation  ul{
+	list-style: none;
+}
+
+.navigation  ul li{
+	float: left;
+}
+
+.table_label{
+	display: block;
+	width: 250px;
+	background-color: #000000;
+	padding: 25px;
+	font-size: 20px;
+	color:#fff;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+.navigation  .rowData {
+	display:none;
+	position: absolute;
+}
+
+.navigation  .rowData:checked ~ label {
+	background-color: #088A08;
+	color:#fff;}
+
+	.content{
+		border-top: solid 7px #D7DF01;
+		background-color: #fff;
+		display: none;
+		position: absolute;
+		height: 320px;
+		width: 1200px;
+		left: 0;
 	}
 
-	body{
-		background-color: #ddd;
-		font-family: 'Sans-serif';
+	.rowData:checked ~ .content{
+		display: block;
 	}
-
-
-  	.navigation {
-  		width: 1200px;
-  		height: 1000px;
-  		margin: 100px auto;
-  		background-color: #fff;
-  		position: relative;
-  	}
-
-  	.navigation  ul{
-  		list-style: none;
-  	}
-
-  	.navigation  ul li{
-  		float: left;
-  	}
-
-  	.table_label{
-  		display: block;
-  		width: 250px;
-  		background-color: #000000;
-  		padding: 25px;
-  		font-size: 20px;
-  		color:#fff;
-  		cursor: pointer;
-  		text-align: center;
-  	}
-
-
-  	.navigation  .rowData {
-  	display:none;
-  	position: absolute;
-  }
-
-  .navigation  .rowData:checked ~ label {
-  	background-color: #088A08;
-  	color:#fff;}
-
-  .content{
-  	border-top: solid 7px #D7DF01;
-  	background-color: #fff;
-  	display: none;
-  	position: absolute;
-  	height: 320px;
-  	width: 1200px;
-  	left: 0;
-  }
-
-  .rowData:checked ~ .content{
-  	display: block;
-  }
-  .content h2{
-  	padding: 10px;
-  	color: #87d3b7;
-  }
-  .content article{
-  	padding: 10px;
-  	color: #555;
-  }
+	.content h2{
+		padding: 10px;
+		color: #87d3b7;
+	}
+	.content article{
+		padding: 10px;
+		color: #555;
+	}
