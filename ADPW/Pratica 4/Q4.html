@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Conceito dos alunos</title>
   <script type="text/javascript">
   /*
   4. Faça uma página em que o usuário digite através de um prompt o
@@ -14,8 +14,18 @@
   50 a 64 Regular
   65 a 84 Bom
   85 a 100 Ótimo
-
   */
+  var conceito = prompt('Informe o conceito do aluno:');
+
+  if(conceito >= 0 && conceito <= 49){
+    alert('A situação do aluno é Insuficiente.');
+  } else if(conceito >= 50 && conceito <= 64){
+    alert('A situação do aluno é Regular.');
+  } else if(conceito >= 65 && conceito <= 84){
+    alert('A situação do aluno é Bom.');
+  } else if(conceito >= 85 && conceito <= 100){
+    alert('A situação do aluno é Ótimo.');
+  }
   </script>
 </head>
 <body>
