@@ -1,17 +1,55 @@
 body {
   background-color: #FFF;
+  font-family: sans-serif;
 }
 .container {
   width: 900px;
   margin: auto;
-  background-color: #FFCCCC;
+  background-color: #fff;
 }
 .logo{
-  width: 900px;
+  width: 890px;
   height: 100px;
   padding: 5px;
+  background-color: #2e2e38;
 }
 img {
+  float: left;
   width: 300px;
   height: 100px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 8px;
+  font-size: 25px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.stage {
+  text-align: center;
+  margin: 5px 500px 0px 0px;
+  padding: 10px;
+  /*border: 3px solid;
+  border-color: #2e2e38; */
+  font-size: 18px;
+  color: #fff;
+  background-color: #2e2e38;
+}
+
+.item {
+  margin: 5px 500px 0px 0px;
+  border: 2px solid;
+  border-color: #2e2e38;
+}
+.title {
+  padding: 5px;
+  border-bottom: 2px solid;
+  border-color: #2e2e38;
+  text-align: left;
+  background-color: #4d76ff;
+}
+.content {
+ padding: 5px;
 }
