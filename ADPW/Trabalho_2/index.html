@@ -32,7 +32,7 @@
       </section>
     </section>
 
-  <section class="item">
+    <section class="item">
       <section class="title">
         Qual campus o projeto está vinculado?
       </section>
@@ -165,18 +165,36 @@
 
     <section class="item">
       <section class="title">
-
+        Vinculado a algum programa / projeto institucional?
       </section>
       <section class="content">
-        <select id="title">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
+        <input type="radio" id="radio_bond" value="Sim"> Sim</br>
+        <input type="radio" id="radio_bond" value="Não"> Não
       </section>
     </section>
 
+    <section class="item">
+      <section class="title">
+        Quais indicadores de sustentabilidade o projeto contempla?
+      </section>
+      <section class="content">
+        <input type="checkbox" id="checkbox_sustainability" value="Carta Terra">Carta Terra</br>
+        <input type="checkbox" id="checkbox_sustainability" value="Objetivos de Desenvolvimento do Milênio">Objetivos de Desenvolvimento do Milênio</br>
+        <input type="checkbox" id="checkbox_sustainability" value="Pacto Global">Pacto Global</br>
+        <input type="checkbox" id="checkbox_sustainability" value="PRME - Princípio para Educação em Gestão Empresarial">PRME - Princípio para Educação em Gestão Empresarial</br>
+        <input type="checkbox" id="checkbox_sustainability" value="Outros">Outros
+        <input type="text" id="other_sustainability" value="" placeholder="Outras opções">
+      </section>
+    </section>
 
+    <section class="item">
+      <section class="title">
+        Descreva como ocorre a interdisciplinaridade do projeto?
+      </section>
+      <section class="content">
+        <textarea name="name" rows="8" cols="80" style="width: 520px;" placeholder="No maximo 500 palavras."></textarea>
+      </section>
+    </section>
 
     <button type="button" name="button" onclick="FormSubmit()">Submit</button>
   </section>
