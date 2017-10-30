@@ -1,5 +1,4 @@
-function FormSubmit() {
-
+function FormProjectCharacterization() { //ON Index
   window.localStorage.setItem('title_project', document.getElementById('title_project').value);
   window.localStorage.setItem('college_campus', document.getElementById('college_campus').value);
   window.localStorage.setItem('director_campus', document.getElementById('director_campus').value);
@@ -14,8 +13,18 @@ function FormSubmit() {
   window.localStorage.setItem('radio_bond', document.getElementById('radio_bond').value);
   window.localStorage.setItem('checkbox_sustainability', document.getElementById('checkbox_sustainability').value);
   window.localStorage.setItem('Describe_interdisciplinarity', document.getElementById('Describe_interdisciplinarity').value);
-
+  /*
   alert(window.localStorage.getItem('title_project'));
 
+  var title_project = window.localStorage.getItem('title_project');
+  // Remove o item
+  window.localStorage.removeItem('title_project');
+
+  */
+  window.location.href = "Project_Coordination.html";
+
+}
+
+function Project_Coordination(){
 
 }
