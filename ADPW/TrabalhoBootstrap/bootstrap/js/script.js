@@ -5,6 +5,7 @@ $(document).ready(function(){
     window.localStorage.setItem('password',  $('#password').val());
     alert("Email: "+window.localStorage.getItem('email')+" Password: " +password);
     event.preventDefault();
+    $(location).attr('href', 'home.html');
   });
 
 });
