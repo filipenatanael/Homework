@@ -45,6 +45,7 @@
               <input type="text" class="form-control" placeholder="Numero chamado...">
             </div>
             <button type="submit" class="btn btn-default">Buscar</button>
+            <button type="submit" class="btn btn-danger">Novo Chamado</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -61,47 +62,124 @@
       </div>
     </nav>
 
+    <div class="well">
+      <span id="username_Field"></span></br>
+      <span id="email_Field"></span>
+    </div>
+
     <div class="panel panel-default">
       <div class="panel-body">
         <table class="table table-striped table-dark">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Username</th>
+              <th scope="col">Chamado</th>
+              <th scope="col">Solicitante</th>
+              <th scope="col">Departamento</th>
+              <th scope="col">Assunto</th>
+              <th scope="col">Status</th>
+              <th scope="col">Tempo</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">325698</th>
+              <td>Matt Murdock</td>
+              <td>Juridico</td>
+              <td>Monitor não ligar</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Aguardando retorno <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Em atendimento</a></li>
+                    <li><a href="#">Aguardando retorno</a></li>
+                    <li><a href="#">Fechado</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td>00:30</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <th scope="row">785623</th>
+              <td>Tony Stark</td>
+              <td>Coordenação TI</td>
+              <td>Error no Jarvis não responde</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Aberto <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Em atendimento</a></li>
+                    <li><a href="#">Aguardando retorno</a></li>
+                    <li><a href="#">Fechado</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td>10:03</td>
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              <th scope="row">659878</th>
+              <td>Kitty Pryde</td>
+              <td>Arquitetura</td>
+              <td>Formatação</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Em atendimento <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Em atendimento</a></li>
+                    <li><a href="#">Aguardando retorno</a></li>
+                    <li><a href="#">Fechado</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td>05:07</td>
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              <th scope="row">125689</th>
+              <td>Barbara Gordon</td>
+              <td>Fiscal</td>
+              <td>Atualização do anti-virus</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Em atendimento <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Em atendimento</a></li>
+                    <li><a href="#">Aguardando retorno</a></li>
+                    <li><a href="#">Fechado</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td>18:07</td>
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
+              <th scope="row">458923</th>
+              <td>Dick Grayson</td>
+              <td>Administrativo</td>
+              <td>Error ao extrair arquivos .batman</td>
+              <td>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Aguardando retorno <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Em atendimento</a></li>
+                    <li><a href="#">Aguardando retorno</a></li>
+                    <li><a href="#">Fechado</a></li>
+                  </ul>
+                </div>
+              </td>
+              <td>11:01</td>
             </tr>
           </tbody>
         </table>
