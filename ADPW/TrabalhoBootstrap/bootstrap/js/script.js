@@ -13,4 +13,6 @@ $(document).ready(function(){
   let message = 'Bem-vindo, ';
   $("#username_Field").text(message+window.localStorage.getItem('username'));
   $("#email_Field").text(window.localStorage.getItem('email'));
+  $("#currentUsername").val(window.localStorage.getItem('username'));
+  $("#currentEmail").val(window.localStorage.getItem('email'));
 });

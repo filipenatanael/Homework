@@ -8,10 +8,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bootstrap/css/styles.css">
 
-  <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <script src="bootstrap/js/script.js"></script>
+
 </head>
 <body>
+
   <div class="container-fluid">
     <p></p>
     <nav class="navbar navbar-inverse">
@@ -40,13 +40,13 @@
               </ul>
             </li>
           </ul>
-          <form class="navbar-form navbar-left">
+          <div class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Numero chamado...">
             </div>
             <button type="submit" class="btn btn-default">Buscar</button>
-            <button type="submit" class="btn btn-danger">Novo Chamado</button>
-          </form>
+            <button type="buttom" class="btn btn-danger" data-toggle="modal" data-target="#modalNewDemands" data-whatever="@mdo">Novo Chamado</button>
+          </div>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meu Perfil <span class="caret"></span></a>
@@ -66,7 +66,6 @@
       <span id="username_Field"></span></br>
       <span id="email_Field"></span>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-body">
         <table class="table table-striped table-dark">
@@ -187,10 +186,49 @@
     </div>
 
 
+    <div class="modal fade" id="modalNewDemands" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Novo Chamado</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Solicitante:</label>
+                  <input type="text" class="form-control" id="currentUsername" placeholder="Titulo da solicitação" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Email:</label>
+                  <input type="text" class="form-control" id="currentEmail" placeholder="Titulo da solicitação" disabled>
+                </div>
+                <label for="recipient-name" class="control-label">Titulo:</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="Titulo da solicitação">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Descrição:</label>
+                <textarea class="form-control" id="message-text" placeholder="Descrição da solicitação..."></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   </div>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="bootstrap/js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
