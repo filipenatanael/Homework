@@ -29,13 +29,11 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="Home.html">Home <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ferramentas <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Funções <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Chamados atendidos</a></li>
-                <li><a href="#">Hisotico de chamados</a></li>
-                <li><a href="#">Projetos em andamento</a></li>
+                <li><a href="TicketScreen.html">Lista de chamados</a></li>
               </ul>
             </li>
           </ul>
@@ -44,7 +42,7 @@
               <input type="text" class="form-control" placeholder="Numero chamado...">
             </div>
             <button type="submit" class="btn btn-default">Buscar</button>
-            <button type="buttom" class="btn btn-danger" data-toggle="modal" data-target="#modalNewDemands" data-whatever="@mdo">Novo Chamado</button>
+            <button type="buttom" class="btn btn-danger" onclick="createTicket()">Novo Chamado</button>
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -53,7 +51,7 @@
                 <li><a href="#">Permissões</a></li>
                 <li><a href="#">Configurações</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Sair do sistemas</a></li>
+                <li><a href="LogIn.html">Sair do sistemas</a></li>
               </ul>
             </li>
           </ul>
@@ -84,9 +82,9 @@
               <td>Monitor não ligar</td>
               <td>00:30</td>
               <td>
-                <button type="button" class="btn btn-success btn-xs" onclick="viewDemand('Matt Murdock','Juridico','Monitor não ligar')">Visualizar</button>
-                <button type="button" class="btn btn-warning btn-xs">Editar</button>
-                <button type="button" class="btn btn-danger btn-xs" onclick="deleteDemand()">Excluir</button>
+                <button type="button" class="btn btn-success btn-xs" onclick="viewTicket('Matt Murdock','Juridico','Monitor não ligar')">Visualizar</button>
+                <button type="button" class="btn btn-warning btn-xs" onclick="editTicket('Matt Murdock','Juridico','Monitor não ligar')">Editar</button>
+                <button type="button" class="btn btn-danger btn-xs" onclick="deleteTicket()">Excluir</button>
               </td>
             </tr>
             <tr>
@@ -95,9 +93,9 @@
               <td>Error no Jarvis não responde</td>
               <td>10:03</td>
               <td>
-                <button type="button" class="btn btn-success btn-xs" onclick="viewDemandModal('Tony Stark','Coordenação TI','Error no Jarvis não responde')">Visualizar</button>
-                <button type="button" class="btn btn-warning btn-xs">Editar</button>
-                <button type="button" class="btn btn-danger btn-xs">Excluir</button>
+                <button type="button" class="btn btn-success btn-xs" onclick="viewTicket('Tony Stark','Coordenação TI','Error no Jarvis não responde')">Visualizar</button>
+                <button type="button" class="btn btn-warning btn-xs" onclick="editTicket('Tony Stark','Coordenação TI','Error no Jarvis não responde')">Editar</button>
+                <button type="button" class="btn btn-danger btn-xs" onclick="deleteTicket()">Excluir</button>
               </td>
             </tr>
             <tr>
@@ -106,9 +104,9 @@
               <td>Formatação</td>
               <td>05:07</td>
               <td>
-                <button type="button" class="btn btn-success btn-xs" onclick="viewDemandModal('Kitty Pryde','Arquitetura','Formatação')">Visualizar</button>
-                <button type="button" class="btn btn-warning btn-xs">Editar</button>
-                <button type="button" class="btn btn-danger btn-xs">Excluir</button>
+                <button type="button" class="btn btn-success btn-xs" onclick="viewTicket('Kitty Pryde','Arquitetura','Formatação')">Visualizar</button>
+                <button type="button" class="btn btn-warning btn-xs" onclick="editTicket('Kitty Pryde','Arquitetura','Formatação')">Editar</button>
+                <button type="button" class="btn btn-danger btn-xs" onclick="deleteTicket()">Excluir</button>
               </td>
             </tr>
             <tr>
@@ -117,9 +115,9 @@
               <td>Atualização do anti-virus</td>
               <td>18:07</td>
               <td>
-                <button type="button" class="btn btn-success btn-xs" onclick="viewDemandModal('Barbara Gordon','Fiscal','Atualização do anti-virus')">Visualizar</button>
-                <button type="button" class="btn btn-warning btn-xs">Editar</button>
-                <button type="button" class="btn btn-danger btn-xs">Excluir</button>
+                <button type="button" class="btn btn-success btn-xs" onclick="viewTicket('Barbara Gordon','Fiscal','Atualização do anti-virus')">Visualizar</button>
+                <button type="button" class="btn btn-warning btn-xs" onclick="editTicket('Barbara Gordon','Fiscal','Atualização do anti-virus')">Editar</button>
+                <button type="button" class="btn btn-danger btn-xs" onclick="deleteTicket()">Excluir</button>
               </td>
             </tr>
             <tr>
@@ -128,9 +126,9 @@
               <td>Error ao extrair arquivos .batman</td>
               <td>11:01</td>
               <td>
-                <button type="button" class="btn btn-success btn-xs" onclick="viewDemandModal('Dick Grayson','Administrativo','Error ao extrair arquivos .batman')">Visualizar</button>
-                <button type="button" class="btn btn-warning btn-xs">Editar</button>
-                <button type="button" class="btn btn-danger btn-xs">Excluir</button>
+                <button type="button" class="btn btn-success btn-xs" onclick="viewTicket('Dick Grayson','Administrativo','Error ao extrair arquivos .batman')">Visualizar</button>
+                <button type="button" class="btn btn-warning btn-xs" onclick="editTicket('Dick Grayson','Administrativo','Error ao extrair arquivos .batman')">Editar</button>
+                <button type="button" class="btn btn-danger btn-xs" onclick="deleteTicket()">Excluir</button>
               </td>
             </tr>
           </tbody>
@@ -158,7 +156,7 @@
     </div>
 
     <!--Modal para registrar um novo chamados  -->
-    <div class="modal fade" id="modalNewDemands" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal fade" id="NewTicket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -170,18 +168,18 @@
               <div class="form-group">
                 <div class="form-group">
                   <label for="recipient-name" class="control-label">Solicitante:</label>
-                  <input type="text" class="form-control" id="currentUsername" placeholder="Titulo da solicitação" disabled>
+                  <input type="text" class="form-control" id="currentUsername" placeholder="Solicitante" disabled>
                 </div>
                 <div class="form-group">
                   <label for="recipient-name" class="control-label">Email:</label>
-                  <input type="text" class="form-control" id="currentEmail" placeholder="Titulo da solicitação" disabled>
+                  <input type="text" class="form-control" id="currentEmail" placeholder="Email" disabled>
                 </div>
                 <label for="recipient-name" class="control-label">Titulo:</label>
-                <input type="text" class="form-control" id="recipient-name" placeholder="Titulo da solicitação">
+                <input type="text" class="form-control" placeholder="Titulo da solicitação">
               </div>
               <div class="form-group">
                 <label for="message-text" class="control-label">Descrição:</label>
-                <textarea class="form-control" id="message-text" placeholder="Descrição da solicitação..."></textarea>
+                <textarea class="form-control" placeholder="Descrição da solicitação..."></textarea>
               </div>
             </form>
           </div>
@@ -194,7 +192,7 @@
     </div>
 
     <!--Modal para visualizar chamados  -->
-    <div class="modal fade" id="DemandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal fade" id="ViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -206,15 +204,15 @@
               <div class="form-group">
                 <div class="form-group">
                   <label for="recipient-name" class="control-label">Solicitante:</label>
-                  <input type="text" class="form-control" id="requester" placeholder="Titulo da solicitação" disabled>
+                  <input type="text" class="form-control" id="requester" placeholder="Solicitante" disabled>
                 </div>
                 <div class="form-group">
                   <label for="recipient-name" class="control-label">Departamento:</label>
-                  <input type="text" class="form-control" id="department" placeholder="Titulo da solicitação" disabled>
+                  <input type="text" class="form-control" id="department" placeholder="Departamento" disabled>
                 </div>
                 <div class="form-group">
                   <label for="message-text" class="control-label">Assunto:</label>
-                  <textarea class="form-control" id="subject" placeholder="Descrição da solicitação..." disabled></textarea>
+                  <textarea class="form-control" id="subject" placeholder="Assunto" disabled></textarea>
                 </div>
               </div>
             </form>
@@ -227,7 +225,7 @@
       </div>
     </div>
 
-    <!--Modal para visualizar chamados  -->
+    <!--Modal para deletar um chamado  -->
     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Lista de registros</title>
+  <title>Editar de registros</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
   <script type="text/javascript" src="bootstrap/js/jQuery.js"></script>
   <script type="text/javascript" src="bootstrap/js/JSFunction.js"></script>
 </head>
-<body>
+<body onload="setEditInfo()">
 
   <div class="container-fluid">
     <p></p>
@@ -59,11 +59,24 @@
 
     <div class="panel panel-default">
       <div class="panel-body">
-
-        <div align="center">
-                <h1>............</h1>
+        <div class="col-sm-4 panel-custom">
+          <form>
+            <div class="form-group">
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Solicitante:</label>
+                <input type="text" class="form-control" id="requester" placeholder="Solicitante">
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Departamento:</label>
+                <input type="text" class="form-control" id="department" placeholder="Departamento">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Assunto:</label>
+                <textarea class="form-control" id="subject" placeholder="Assunto"></textarea>
+              </div>
             </div>
-
+          </form>
+        </div>
       </div>
     </div>
 

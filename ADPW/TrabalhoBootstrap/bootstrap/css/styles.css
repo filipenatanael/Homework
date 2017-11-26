@@ -13,3 +13,9 @@
   margin-top: 15px;
   text-align: center;
 }
+.panel-custom {
+  background-color:lavender;
+  padding: 25px;
+  border-radius: 12px;
+  color: #333333;
+}
