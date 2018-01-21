@@ -1,0 +1,52 @@
+body{
+  margin: 0;
+}
+
+.topo{
+  width: 100%;
+  max-width: 812px;
+  height: 100px;
+  margin: auto;
+  border: 5px solid green;
+  padding: 2px;
+  margin: 2px;
+}
+
+.corpo{
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  border: 5px solid green;
+  padding: 5px;
+  margin: 2px;
+}
+
+.menu{
+  width: 49%;
+  height: 300px;
+  float: left;
+  background-color:red;
+  border: solid;
+}
+
+.conteudo{
+  width: 49%;
+  height: 300px;
+  float: right;
+  background-color:red;
+  border: solid;
+}
+
+.rodape{
+  width: 100%;
+  border: 5px solid green;
+  padding: 2px;
+  margin: 2px;
+}
+
+.site{
+  width: 800px;
+  height: 100px;
+  margin: auto;
+}
