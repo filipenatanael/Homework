@@ -1,4 +1,4 @@
--- Create Stored Procedure 
+-- Create Stored Procedure
 
 CREATE PROCEDURE uspTryCatchAndTran
 (
@@ -7,34 +7,23 @@ CREATE PROCEDURE uspTryCatchAndTran
 )
 AS
 BEGIN
-   
+
    BEGIN TRY
-      -- Iniciando transação de dados
+      -- Iniciando transaï¿½ï¿½o de dados
 	  BEGIN TRAN
 	  -- Iniciando estrutura condifional
 	  IF(@Nome IS NOT NULL)
 	  BEGIN
 	  INSERT INTO PESSOAS(Nome,CPF) VALUES(@Nome,@CPF)
 	  END
-
 	  COMMIT TRAN
-	  
 	  SELECT @Nome AS Retorno
-	  
    END TRY
    BEGIN CATCH
-
       ROLLBACK TRAN
       SELECT ERROR_MESSAGE() AS Retorno
-
    END CATCH
-
-
 END
 
-
--- Testing Stored Procedure >> Exceção e Transação
-
+-- Testing Stored Procedure >> Exceï¿½ï¿½o e Transaï¿½ï¿½o
 EXEC uspTryCatchAndTran 'Carlos Antonio', '564161613'
-
-SELECT * FROM PESSOAS

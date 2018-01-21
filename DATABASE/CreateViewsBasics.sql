@@ -2,13 +2,12 @@
 
 CREATE VIEW uvwPessoasProdutos
 AS
-
-SELECT 
+SELECT
      PESSOAS.Nome,
 	 PEDIDOS.Valor,
      PRODUTOS.Descricao
 	 FROM PEDIDOS
-	 JOIN 
+	 JOIN
 	   PESSOAS ON PEDIDOS.IDPESSOA = PESSOAS.IDPessoas
 	 JOIN
 	   PRODUTOS ON PEDIDOS.IDProdutos = PRODUTOS.IDProdutos

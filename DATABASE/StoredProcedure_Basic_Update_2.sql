@@ -4,10 +4,8 @@ CREATE PROCEDURE uspUpdateProdutos
    @Descricao VARCHAR(100)
 )
 AS
-BEGIN
-   
+BEGIN 
    UPDATE PRODUTOS SET Descricao = @Descricao WHERE IDProdutos = @IDProdutos
-
 END
 
 -- Testing Procedure
