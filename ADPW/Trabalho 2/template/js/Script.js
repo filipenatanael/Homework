@@ -16,14 +16,6 @@ function FormProjectCharacterization() { //ON Index
   window.localStorage.setItem('Describe_interdisciplinarity', document.getElementById('Describe_interdisciplinarity').value);
 
   window.location.href = "Project_Coordination.html";
-  /*
-  alert(window.localStorage.getItem('title_project'));
-
-  var title_project = window.localStorage.getItem('title_project');
-  // Remove o item
-  window.localStorage.removeItem('title_project');
-  console.log(window.localStorage);
-  */
 }
 
 function Project_Coordination(){
@@ -41,8 +33,6 @@ function Project_Coordination(){
   window.localStorage.setItem('address_curriculum', document.getElementById('address_curriculum').value);
 
   window.location.href = "Show_All_Information.html";
-
-
 
 }
 
