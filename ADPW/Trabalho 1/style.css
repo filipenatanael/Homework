@@ -9,7 +9,6 @@ body{
 	font-family: 'Sans-serif';
 }
 
-
 .navigation {
 	width: 1200px;
 	height: 1000px;
@@ -36,7 +35,6 @@ body{
 	cursor: pointer;
 	text-align: center;
 }
-
 
 .navigation  .rowData {
 	display:none;
