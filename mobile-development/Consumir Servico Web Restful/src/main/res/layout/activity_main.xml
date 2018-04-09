@@ -35,7 +35,6 @@
             android:layout_weight="0.44"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
 
         <Button
             android:id="@+id/btnPesquisar"
