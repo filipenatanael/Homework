@@ -2,6 +2,7 @@ package com.project.fun.the.agendacontatos;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -51,7 +52,32 @@ public class BDSQLiteHelper extends SQLiteOpenHelper{
     }
 
 
+    public Contato getContato(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABELA_CONTATOS,
+                COLUNAS,
+                " id = ?",
+                new String[] { String.valueOf(id) },
+                null,
+                null,
+                null,
+                null);
+        if (cursor == null) {
+            return null;
+        } else {
+            cursor.moveToFirst();
+            Contato contato = cursorToContato(cursor);
+            return contato;
+        }
+    }
 
+    private Contato cursorToContato(Cursor cursor) {
+        Contato contato = new Contato();
+        contato.setId(Integer.parseInt(cursor.getString(0)));
+        contato.setNome(cursor.getString(1));
+        contato.setTelefone(cursor.getString(2));
+        return contato;
+    }
 
 
 }

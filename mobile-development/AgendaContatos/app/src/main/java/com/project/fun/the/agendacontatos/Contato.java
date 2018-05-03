@@ -6,6 +6,7 @@ package com.project.fun.the.agendacontatos;
 
 public class Contato {
 
+    private int id;
     private String nome;
     private String telefone;
 
@@ -32,4 +33,12 @@ public class Contato {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
