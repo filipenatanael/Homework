@@ -39,11 +39,6 @@ public class MainActivity extends Activity {
             }
         });
 
-
-
-
-        //Intent intent = new Intent(MainActivity.this, AddContatosActivity.class);
-        //startActivity(intent);
     }
 
 }
