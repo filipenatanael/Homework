@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddContatosActivity" />
-        <activity android:name=".MeusContatosActivity"></activity>
+        <activity android:name=".MeusContatosActivity" />
+        <activity android:name=".MyContactsActivity"></activity>
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         btnNovoContato = (Button) findViewById(R.id.btnNovoContato);
         btnMeusContatos = (Button) findViewById(R.id.btnMeusContatos);
 
-        btnMeusContatos.setOnClickListener(new View.OnClickListener() {
+        btnNovoContato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddContatosActivity.class);
@@ -31,7 +31,13 @@ public class MainActivity extends Activity {
             }
         });
 
-
+        btnMeusContatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyContactsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -39,4 +45,5 @@ public class MainActivity extends Activity {
         //Intent intent = new Intent(MainActivity.this, AddContatosActivity.class);
         //startActivity(intent);
     }
+
 }
