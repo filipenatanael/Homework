@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class AddContatosActivity extends Activity {
 
-    private BDSQLiteHelper db;
+    private BDSQLiteHelper database;
     private Button btnAdicionar;
     private EditText nome;
     private EditText telefone;
@@ -19,7 +19,7 @@ public class AddContatosActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contatos);
 
-        db = new BDSQLiteHelper(this);
+        database = new BDSQLiteHelper(this);
 
         nome = (EditText) findViewById(R.id.editTextNome);
         telefone = (EditText) findViewById(R.id.editTextTelefone);
@@ -35,7 +35,7 @@ public class AddContatosActivity extends Activity {
                 contato.setNome(nome.getText().toString());
                 contato.setTelefone(telefone.getText().toString());
 
-                db.addContato(contato);
+                database.addContato(contato);
 
                 Toast.makeText(getBaseContext(), nome.getText().toString()+" Foi adicionado!", Toast.LENGTH_SHORT).show();
 
