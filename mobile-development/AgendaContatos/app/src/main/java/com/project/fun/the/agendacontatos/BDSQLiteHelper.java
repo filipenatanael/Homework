@@ -81,13 +81,15 @@ public class BDSQLiteHelper extends SQLiteOpenHelper{
         return contato;
     }
 
-    public ArrayList<Contato> getAllLivros(){
+    public ArrayList<Contato> getAllContatos(){
         ArrayList<Contato> listaContatos = new ArrayList<Contato>();
-        String query = "SELECT * FROM " + TABELA_CONTATOS;
+        String query = "SELECT * FROM "+TABELA_CONTATOS;
+
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if(cursor.moveToFirst()){
-            do { Contato contato = cursorToContato(cursor);
+            do {
+                Contato contato = cursorToContato(cursor);
                 listaContatos.add(contato);
         } while (cursor.moveToNext());
         }
