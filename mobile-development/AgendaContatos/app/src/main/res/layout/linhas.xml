@@ -9,10 +9,10 @@
 
         <ImageView
             android:id="@+id/imgViewProfile"
-            android:layout_width="98dp"
+            android:layout_width="92dp"
             android:layout_height="71dp"
             android:layout_margin="5dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitStart"
             android:src="@drawable/profile" />
 
         <LinearLayout
@@ -28,7 +28,10 @@
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Nome"
+                android:text="Filipe Natanael"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_green_dark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -37,9 +40,10 @@
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.03"
-                android:text="Telefone"
+                android:text="(31) 9 9999-9999"
+                android:textAlignment="viewStart"
                 android:textSize="18sp"
-                android:textStyle="normal|italic" />
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
