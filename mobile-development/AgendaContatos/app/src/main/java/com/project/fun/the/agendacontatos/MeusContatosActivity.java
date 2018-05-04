@@ -2,6 +2,7 @@ package com.project.fun.the.agendacontatos;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,9 +22,7 @@ public class MeusContatosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meus_contatos);
-
         database = new BDSQLiteHelper(this);
-
 
     }
 
@@ -38,11 +37,11 @@ public class MeusContatosActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-
-                Toast.makeText(MeusContatosActivity.this, listaContatos.get(position).getNome(), Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(MeusContatosActivity.this, MeusContatosActivity.class);
-                //intent.putExtra("ID", listaContatos.get(position).getId());
-                //startActivity(intent);
+                //Toast.makeText(MeusContatosActivity.this, listaContatos.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                String telefone = listaContatos.get(position).getTelefone().toString();
+                Uri uri = Uri.parse("tel:"+telefone);
+                Intent intent = new Intent(Intent.ACTION_DIAL,uri);
+                startActivity(intent);
             }
         });
     }
