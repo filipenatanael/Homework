@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toolbar;
 
 import java.util.ArrayList;
@@ -12,7 +13,8 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
     private Button btnNovoContato;
-    private  Button btnMeusContatos;
+    private Button btnMeusContatos;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class MainActivity extends Activity {
 
         btnNovoContato = (Button) findViewById(R.id.btnNovoContato);
         btnMeusContatos = (Button) findViewById(R.id.btnMeusContatos);
+        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView.setImageResource(R.drawable.logo);
 
         btnNovoContato.setOnClickListener(new View.OnClickListener() {
             @Override

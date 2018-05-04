@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AgendaContatos</string>
+    <string name="app_name">Agenda Contatos</string>
+    <string name="author">Filipe Natanael</string>
 </resources>
