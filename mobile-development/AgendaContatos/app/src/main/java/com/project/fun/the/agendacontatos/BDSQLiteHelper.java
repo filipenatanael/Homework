@@ -96,6 +96,21 @@ public class BDSQLiteHelper extends SQLiteOpenHelper{
         return listaContatos;
     }
 
+    public ArrayList<Contato> getSearchContatos(String search){
+        ArrayList<Contato> listaContatos = new ArrayList<Contato>();
+        String query = "SELECT * FROM "+TABELA_CONTATOS+" WHERE nome LIKE '%"+search+"%'";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        if(cursor.moveToFirst()){
+            do {
+                Contato contato = cursorToContato(cursor);
+                listaContatos.add(contato);
+            } while (cursor.moveToNext());
+        }
+        return listaContatos;
+    }
+
 
 
 }
