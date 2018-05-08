@@ -62,7 +62,6 @@ public class MeusContatosActivity extends Activity {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view,
                                                 int position, long id) {
-                            //Toast.makeText(MeusContatosActivity.this, listaContatos.get(position).getNome(), Toast.LENGTH_SHORT).show();
                             String telefone = listaContatos.get(position).getTelefone().toString();
                             Uri uri = Uri.parse("tel:"+telefone);
                             Intent intent = new Intent(Intent.ACTION_DIAL,uri);
@@ -78,7 +77,6 @@ public class MeusContatosActivity extends Activity {
     }
 
 
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -90,7 +88,6 @@ public class MeusContatosActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                //Toast.makeText(MeusContatosActivity.this, listaContatos.get(position).getNome(), Toast.LENGTH_SHORT).show();
                 String telefone = listaContatos.get(position).getTelefone().toString();
                 Uri uri = Uri.parse("tel:"+telefone);
                 Intent intent = new Intent(Intent.ACTION_DIAL,uri);

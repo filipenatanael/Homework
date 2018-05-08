@@ -111,6 +111,4 @@ public class BDSQLiteHelper extends SQLiteOpenHelper{
         return listaContatos;
     }
 
-
-
 }

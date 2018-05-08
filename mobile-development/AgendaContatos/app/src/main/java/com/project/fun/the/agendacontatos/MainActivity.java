@@ -21,7 +21,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         btnNovoContato = (Button) findViewById(R.id.btnNovoContato);
         btnMeusContatos = (Button) findViewById(R.id.btnMeusContatos);
         imageView = (ImageView) findViewById(R.id.imageView);
