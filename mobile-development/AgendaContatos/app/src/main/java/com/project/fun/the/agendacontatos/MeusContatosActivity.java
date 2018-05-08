@@ -28,8 +28,6 @@ public class MeusContatosActivity extends Activity {
         setContentView(R.layout.activity_meus_contatos);
         database = new BDSQLiteHelper(this);
 
-
-
         searchViewContato = (SearchView) findViewById(R.id.searchViewContato);
         buttonSearch = (Button) findViewById(R.id.buttonSearch);
 

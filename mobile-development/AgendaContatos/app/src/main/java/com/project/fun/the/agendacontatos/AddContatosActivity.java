@@ -18,26 +18,26 @@ public class AddContatosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contatos);
-
         database = new BDSQLiteHelper(this);
 
         nome = (EditText) findViewById(R.id.editTextNome);
         telefone = (EditText) findViewById(R.id.editTextTelefone);
-
         btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
-
 
         btnAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Contato contato = new Contato();
-                contato.setNome(nome.getText().toString());
-                contato.setTelefone(telefone.getText().toString());
+                if (!nome.getText().toString().isEmpty() && !telefone.getText().toString().isEmpty()) {
+                    Contato contato = new Contato();
+                    contato.setNome(nome.getText().toString());
+                    contato.setTelefone(telefone.getText().toString());
+                    database.addContato(contato);
 
-                database.addContato(contato);
-
-                Toast.makeText(getBaseContext(), nome.getText().toString()+" Foi adicionado!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), nome.getText().toString()+" Foi adicionado!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getBaseContext(), nome.getText().toString()+" Todos os campus devem esta preenchidos.", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
