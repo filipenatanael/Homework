@@ -10,7 +10,7 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-      $courses = Course::paginate(1);
+      $courses = Course::paginate(3);
       return view('welcome', compact('courses'));
     }
 }

@@ -12,27 +12,31 @@
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="nav-wrapper deep-orange">
-        <a href="#!" class="brand-logo">Laravel Course</a>
-        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="/">Home</a></li>
+  <div class="container">
+    <div class="row">
+      <header>
+        <nav>
+          <div class="nav-wrapper teal green darken-3">
+            <a href="#!" class="brand-logo">  Laravel Course</a>
+            <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/">Home</a></li>
 
-          @if(Auth::guest())
-            <li><a href="{{ route('login') }}">Login</a></li>
-          @else
-            <li><a href="{{ route('admin.courses') }}">Courses</a></li>
-            <li><a href="#">{{ Auth::user()->name }}</a></li>
-            <li><a href="{{ route('site.login.logout') }}">Logout</a></li>
-          @endif
+              @if(Auth::guest())
+                <li><a href="{{ route('login') }}">Login</a></li>
+              @else
+                <li><a href="{{ route('admin.courses') }}">Courses</a></li>
+                <li><a href="#">{{ Auth::user()->name }}</a></li>
+                <li><a href="{{ route('site.login.logout') }}">Logout</a></li>
+              @endif
 
-        </ul>
-        <ul class="side-nav" id="mobile">
-          <li><a href="/">Home</a></li>
-          <li><a href="{{ route('admin.courses') }}">Components</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+            </ul>
+            <ul class="side-nav" id="mobile">
+              <li><a href="/">Home</a></li>
+              <li><a href="{{ route('admin.courses') }}">Components</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
