@@ -24,11 +24,13 @@
               </div>
               <div class="card-content">
                 <h4>{{ $course->title }}</h4>
-                <p>{{ $course->description }}</p>
+                <p align="justify">{{ $course->description }}</p>
               </div>
+
               <div class="card-action">
-                <a href="#">See more...</a>
-                <div align="right"><img src="{{ asset($course->image) }}" height="200"></div>
+
+                <div align="right"><img src="img/LikeButton.png" width="35" id="{{ $course->title }}" height="35" onclick="likeThis('{{ $course->title }}')"></div>
+
               </div>
             </div>
           </div>
