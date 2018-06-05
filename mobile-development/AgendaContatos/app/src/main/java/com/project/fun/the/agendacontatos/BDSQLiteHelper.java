@@ -87,6 +87,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper{
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
+		
         if(cursor.moveToFirst()){
             do {
                 Contato contato = cursorToContato(cursor);
