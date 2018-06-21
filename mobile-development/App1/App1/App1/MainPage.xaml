@@ -6,22 +6,20 @@
 
     <StackLayout>
         <Label Text="Cotação do Dia" 
-               VerticalOptions="Center" />
+               HorizontalOptions="Center" 
+               TextColor="#77d065" 
+               FontSize = "22"           
+               />
 
-        <Label Text="Parcelas: "/>
-        <Picker x:Name="pkParcelas" />
+        <Label Text="Selecione a moeda desejada: "/>
+        <Picker x:Name="pickerMoedaDesejada" />
 
-        <Label Text="Valor: "/>
-        <Entry x:Name="entryValor"/>
-
-        <Label Text="Taxa: "/>
-        <Entry x:Name="entryTaxa"/>
-
-        <Label Text="Valor: "/>
-        <Entry x:Name="resultado"/>
+        <Label Text="Valor em R$: "/>
+        <Entry x:Name="entryValorEmReais"/>
 
         <Button Text="Calcular"/>
+        <Label Text="Resultado: "/>
+        
     </StackLayout>
-
 
 </ContentPage>
