@@ -4,8 +4,24 @@
              xmlns:local="clr-namespace:App1"
              x:Class="App1.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <Label Text="Cotação do Dia" 
+               VerticalOptions="Center" />
+
+        <Label Text="Parcelas: "/>
+        <Picker x:Name="pkParcelas" />
+
+        <Label Text="Valor: "/>
+        <Entry x:Name="entryValor"/>
+
+        <Label Text="Taxa: "/>
+        <Entry x:Name="entryTaxa"/>
+
+        <Label Text="Valor: "/>
+        <Entry x:Name="resultado"/>
+
+        <Button Text="Calcular"/>
+    </StackLayout>
+
 
 </ContentPage>
