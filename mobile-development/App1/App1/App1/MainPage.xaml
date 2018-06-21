@@ -12,7 +12,7 @@
                />
 
         <Label Text="Selecione a moeda desejada: "/>
-        <Picker x:Name="pickerMoedaDesejada" />
+        <Picker x:Name="pickerMoedaDesejada" SelectedIndexChanged="OnItemSelected"/>
 
         <Label Text="Valor em R$: "/>
         <Entry x:Name="entryValorEmReais"/>
