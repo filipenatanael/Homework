@@ -8,7 +8,7 @@
         <Label Text="Calculando Parcelas"/>
 
         <Label Text="Parcelas: "/>
-        <Picker x:Name="pkParcelas" SelectedIndexChanged="OnItemSelected"/>
+        <Picker x:Name="pkParcelas" />
       
         <Label Text="Valor: "/>
         <Entry x:Name="entryValor"/>

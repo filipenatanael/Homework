@@ -15,11 +15,11 @@ namespace App1
 
             Picker pickerMoedaDesejada = this.FindByName<Picker>("pickerMoedaDesejada");
             List<string> Moedas = new List<string>();
-            Moedas.Add("USD");
-            Moedas.Add("EUR");
-            Moedas.Add("ARS");
-            Moedas.Add("GBP");
-            Moedas.Add("BTC");
+            Moedas.Add("Dolar");
+            Moedas.Add("Euro");
+            Moedas.Add("Peso Argentino");
+            Moedas.Add("Libra Esterlina");
+            Moedas.Add("Bitcoin");
 
             pickerMoedaDesejada.ItemsSource = Moedas;
         }
@@ -27,31 +27,42 @@ namespace App1
         public void OnItemSelected(object sender, EventArgs e)
         {
             Picker primaryKey = (Picker)sender;
-            Entry entryValor = this.FindByName<Entry>("entryValorEmReais");
+            Entry entryMoeda = this.FindByName<Entry>("entryMoeda");
 
             if (primaryKey.SelectedIndex != -1 && primaryKey.SelectedIndex > 0)
             {
                 if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Dolar"))
                 {
-                    entryValor.Text = "USD";
+                    entryMoeda.Text = "USD";
                 }
                 else if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Euro"))
                 {
-                    entryValor.Text = "EUR";
+                    entryMoeda.Text = "EUR";
                 }
                 else if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Peso Argentino"))
                 {
-                    entryValor.Text = "ARS";
+                    entryMoeda.Text = "ARS";
                 }
                 else if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Libra Esterlina"))
                 {
-                    entryValor.Text = "GBP";
+                    entryMoeda.Text = "GBP";
                 }
-                else if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Betcoin"))
+                else if (primaryKey.Items[primaryKey.SelectedIndex].Equals("Bitcoin"))
                 {
-                    entryValor.Text = "BTC";
+                    entryMoeda.Text = "BTC";
                 }
             }
+        }
+
+        public void Calcular(object sender, EventArgs e)
+        {
+            Entry entryMoeda = this.FindByName<Entry>("entryMoeda");
+            Entry entryValor = this.FindByName<Entry>("entryValorEmReais");
+            Entry resultado = this.FindByName<Entry>("resultado");
+            Picker pickerMoedaDesejada = this.FindByName<Picker>("pickerMoedaDesejada");
+
+
+
         }
 
 
