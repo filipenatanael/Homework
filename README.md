@@ -1,9 +1,25 @@
 # Homework
 
-- Database
-- ADPW
+- Entity Framework Project
+  - Base Entity Framework Project
+  - Entity Framework Consulta
+  - My First API on Entity
+- Transact-SQL
+  - All Exercises
 - Mobile Development
-- POO
-- Software Testing
+  - AgendaContatos - Android
+  - Consumir Servico Web Restful - Android
+  - Efetuar Ligacao - Android
+  - Exame Pratico - Xamarin
+  - Paramentros Activitys - Android
+  - Simulador Veiculos - Android
+  - Trabalho Xamarin
+- Object Oriented Programming
+  -  All Exercises
+  -  All Homeworks
+- Programming Environments and Interfaces
+  - Homework 1 - Curriculum Virtual - HTML5 - CSS3
+  - Homework 1 - Portal Institucional - HTML5 - CSS3 - JAVASCRIPT ES6
+  - Homework 1 - Curriculum Virtual - BOOTSTRAP - JAVASCRIPT ES6
 - UX Design
-- Web Development
+  - Culinary Recipes - LARAVEL 5.5 - MATERIALIZE - VUE JS 2
