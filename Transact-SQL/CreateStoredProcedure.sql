@@ -10,7 +10,6 @@ BEGIN
    INSERT INTO PESSOAS(Nome,CPF) VALUES(@Nome,@CPF)
 END
 
-
 -- Testing of procedure
 EXEC uspInsertPessoas 'Jose','34616156'
 

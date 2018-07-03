@@ -67,10 +67,8 @@ END
 (32) Contar a quantidade de registros da tabela materialGeral. Verificar a estrutura
 dessa tabela.
 */
-
 SELECT COUNT(*) FROM MaterialGeral
 SP_HELP MaterialGeral
-
 
 
 /*
@@ -79,8 +77,6 @@ registros nessa tabela. Veja o exemplo no material teórico (Teoria_Parte III). O
 que o campo total é um campo calculado, será gerado automaticamente baseado nos
 valores do campo quantidade e do campo valor.
 */
-
-
 DECLARE @tempoInicial DATETIME, @contador INT, @tempoFinal DATETIME
 DECLARE @descricaoMaterial VARCHAR(60)
 DECLARE @quantidadeMaterial INT
@@ -117,8 +113,6 @@ SELECT * FROM MaterialGeral
 (35) Executar (copiar/colar/executar) o Script de alteração da tabela materialGeral.
 Nome: Script_Adicional_Tabela_MaterialGeral.TXT
 */
-
-
 DECLARE @descricao VARCHAR(60), @quantidade INT, @valor float
 SET @descricao = 'DESCRICAO: '
 SET @quantidade = 2
@@ -157,6 +151,5 @@ PRINT '---------------'
 produto e ordenados por descrição. Anote o tempo de resposta para essa operação.
 Veja o Exemplo:
 */
-
 SELECT descricao AS 'DESCRICAO', COUNT(*) AS 'QUANTIDADE' FROM MaterialGeral
 GROUP BY descricao ORDER BY descricao
