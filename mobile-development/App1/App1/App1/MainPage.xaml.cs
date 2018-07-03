@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XF_WebApi.Model;
 
 namespace App1
 {
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
 
             Picker pickerMoedaDesejada = this.FindByName<Picker>("pickerMoedaDesejada");
             List<string> Moedas = new List<string>();
@@ -51,20 +52,27 @@ namespace App1
                 {
                     entryMoeda.Text = "BTC";
                 }
+                //}
             }
         }
 
         public void Calcular(object sender, EventArgs e)
         {
-            Entry entryMoeda = this.FindByName<Entry>("entryMoeda");
+            Entry entryMoedaCalcular = this.FindByName<Entry>("entryMoeda");
             Entry entryValor = this.FindByName<Entry>("entryValorEmReais");
             Entry resultado = this.FindByName<Entry>("resultado");
             Picker pickerMoedaDesejada = this.FindByName<Picker>("pickerMoedaDesejada");
 
+            if (entryValor.Text != null && !entryValor.Text.Equals("") && pickerMoedaDesejada.SelectedIndex != -1
+                && entryMoedaCalcular.Text != null && !entryMoedaCalcular.Text.Equals(""))
+            {
 
+            }
+            else
+            {
+                DisplayAlert("Atenção: ", "Preenchar todos os campos", "OK");
+            }
 
         }
-
-
     }
 }
