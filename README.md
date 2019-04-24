@@ -7,19 +7,20 @@
 - **Transact-SQL**
   - All Exercises
 - **Mobile Development**
-  - AgendaContatos - *Android*
-  - Consumir Servico Web Restful - *Android*
-  - Efetuar Ligacao - *Android*
-  - Exame Pratico - *Xamarin*
-  - Paramentros Activitys - *Android*
-  - Simulador Veiculos - *Android*
-  - Trabalho - *Xamarin*
+  - AgendaContatos - ( Android )
+  - Consumir Servico Web Restful - ( Android )
+  - Efetuar Ligacao - ( Android )
+  - Exame Pratico - ( Xamarin )
+  - Paramentros Activitys - ( Android )
+  - Simulador Veiculos - ( Android )
+  - Trabalho - ( Xamarin )
 - **Object Oriented Programming**
   -  All Exercises
   -  All Homeworks
+  -  Practical script 003
 - **Programming Environments and Interfaces**
-  - Homework 1 - Curriculum Virtual - *HTML5 - CSS3*
-  - Homework 2 - Portal Institucional - *HTML5 - CSS3 - JAVASCRIPT ES6*
-  - Homework 3 - Curriculum Virtual - *BOOTSTRAP - JAVASCRIPT ES6*
+  - Homework 1 - Curriculum Virtual - ( HTML5 - CSS3 )
+  - Homework 2 - Portal Institucional - ( HTML5 - CSS3 - JAVASCRIPT ES6 )
+  - Homework 3 - Curriculum Virtual - ( BOOTSTRAP - JAVASCRIPT ES6 )
 - **UX Design**
-  - Culinary Recipes - *LARAVEL 5.5 - MATERIALIZE - VUE JS 2*
+  - Culinary Recipes - ( LARAVEL 5.5 - MATERIALIZE - VUE JS 2 )
