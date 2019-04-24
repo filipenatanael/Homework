@@ -109,5 +109,64 @@ namespace RoteiroPrático003.Models
             }
             Console.ReadKey();
         }
+
+        public void AdicionarDisciplinaParaOEstudante()
+        {
+            Console.WriteLine("\t\tInforme o CPF do estudante: ");
+            Console.Write("\t\t");
+            var cpf = Console.ReadLine();
+
+            if (CPFValidator(cpf) != null)
+            {
+                Console.WriteLine("\t\tInforme o nome da disciplina: ");
+                Console.Write("\t\t");
+                Pessoa.Curso = Console.ReadLine();
+                Console.WriteLine("\t\tCadastro efetuado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("\t\tCPF não cadastrado!");
+            }
+            Console.ReadKey();
+        }
+
+        private bool ValidarAprovacao(double notas)
+        {
+            if (notas >= 70)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void AtribuirNotas()
+        {
+            Console.WriteLine("\t\tInforme o CPF: ");
+            Console.Write("\t\t");
+            var cpf = Console.ReadLine();
+
+            if (CPFValidator(cpf) != null)
+            {
+                Console.WriteLine("\t\tInforme uma nota para o estutante: ");
+                Console.Write("\t\t");
+
+                var notas = Convert.ToInt32(Console.ReadLine());
+                bool status = ValidarAprovacao(notas);
+
+                if (status == true)
+                {
+                    Pessoa.Notas = notas;
+                    Console.WriteLine("\t\tEstutante Aprovado!");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Pessoa.Notas = notas;
+                    Console.WriteLine("\t\tEstutante Reprovado!");
+                    Console.ReadKey();
+                }
+            }
+        }
+
     }
 }
