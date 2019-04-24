@@ -15,5 +15,42 @@ namespace RoteiroPrático003.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string CEP { get; set; }
+
+        public void AtribuirEndereco()
+        {
+            /*
+             * 
+             * Atribuir informações sobre o endereço.
+             *
+            */
+            Console.WriteLine("\t\tInforme o Logradouro: ");
+            Console.Write("\t\t");
+            this.Logradouro = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Numero: ");
+            Console.Write("\t\t");
+            this.Numero = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Complemento: ");
+            Console.Write("\t\t");
+            this.Complemento = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Bairro: ");
+            Console.Write("\t\t");
+            this.Bairro = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Cidade: ");
+            Console.Write("\t\t");
+            this.Cidade = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Estado: ");
+            Console.Write("\t\t");
+            this.Estado = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o CPF: ");
+            Console.Write("\t\t");
+            this.CEP = Console.ReadLine();
+        }
+
     }
 }
