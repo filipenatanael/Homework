@@ -5,3 +5,10 @@ C:\Users\Filipe\source\repos\RoteiroPrático003\obj\Debug\RoteiroPrático003.csp
 C:\Users\Filipe\source\repos\RoteiroPrático003\obj\Debug\RoteiroPrático003.csproj.CoreCompileInputs.cache
 C:\Users\Filipe\source\repos\RoteiroPrático003\obj\Debug\RoteiroPrático003.exe
 C:\Users\Filipe\source\repos\RoteiroPrático003\obj\Debug\RoteiroPrático003.pdb
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\obj\Debug\RoteiroPrático003.csprojAssemblyReference.cache
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\obj\Debug\RoteiroPrático003.csproj.CoreCompileInputs.cache
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\obj\Debug\RoteiroPrático003.exe
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\obj\Debug\RoteiroPrático003.pdb
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\bin\Debug\RoteiroPrático003.exe.config
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\bin\Debug\RoteiroPrático003.exe
+C:\Users\Filipe\Documents\GitHub\Homework\Object Oriented Programming\RoteiroPrático003\bin\Debug\RoteiroPrático003.pdb

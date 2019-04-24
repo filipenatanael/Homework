@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Estudante .cs" />
+    <Compile Include="Models\Faculdade.cs" />
     <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
