@@ -18,3 +18,10 @@ mobile-development/App1/App1/App1.Android/Resources/mipmap-xxxhdpi
 mobile-development/App1/App1/App1.Android/Resources/mipmap-hdpi
 mobile-development/App1/App1/App1.Android/Resources/drawable-xhdpi
 mobile-development/App1/App1/App1.Android/Resources/drawable-xxhdpi/icon.png
+*.exe
+*.cache
+*.ide-shm
+*.ide
+*.lock
+*.ide-wal
+Object Oriented Programming/RoteiroPrático003/.vs/RoteiroPrático003/v16/.suo
