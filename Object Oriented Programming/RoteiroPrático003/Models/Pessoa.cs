@@ -22,12 +22,11 @@ namespace RoteiroPrático003.Models
         public string DataDeAdmissao { get; set; }
         public string Disciplina { get; set; }
 
-        public void log()
+        public void toString()
         {
             Console.WriteLine("\n\t\tNome: " + Nome + "\n\t\tData de Nascimento: " + DataDeNascimento + "\n\t\tEndereço: " + Endereco + "\n\t\tRaça: " + Raca +
                              "\n\t\tGenero: " + Genero + "\n\t\tEstado Cívil: " + EStadoCivil + "\n\t\tCPF: " + CPF + "\n\t\tRG: " + RG +
                              "\n\t\tCurso: " + Curso + "\n\t\tData da matricula: " + DataDeMatricula + "\n\t\tNota: " + Notas);
-            Console.ReadKey();
         }
     }
 }

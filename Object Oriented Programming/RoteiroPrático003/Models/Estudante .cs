@@ -15,35 +15,64 @@ namespace RoteiroPrático003.Models
         {
             Pessoa = new Pessoa();
 
-            Console.WriteLine("\t\tInsira o nome do Aluno: ");
+            Console.WriteLine("\t\tInforme o Nome do estudante: ");
             Console.Write("\t\t");
             Pessoa.Nome = Console.ReadLine();
 
-            Console.WriteLine("\t\tInsira o Data de nascimento do Aluno: ");
+            Console.WriteLine("\t\tInforme a Data de Nascimento: ");
             Console.Write("\t\t");
             Pessoa.DataDeNascimento = Console.ReadLine();
 
-            Console.WriteLine("\t\tInsira o Endereço completo do Aluno: ");
+            /*
+             * 
+             * Atribuir informações sobre o endereço.
+             *
+            */
+            Console.WriteLine("\t\tInforme o Logradouro: ");
             Console.Write("\t\t");
-            Pessoa.Endereco = Console.ReadLine();
+            Pessoa.Endereco.Logradouro = Console.ReadLine();
 
-            Console.WriteLine("\t\tQual a Raça: ");
+            Console.WriteLine("\t\tInforme o Numero: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.Numero = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Complemento: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.Complemento = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Bairro: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.Bairro = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Cidade: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.Cidade = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o Estado: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.Estado = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme o CPF: ");
+            Console.Write("\t\t");
+            Pessoa.Endereco.CEP = Console.ReadLine();
+
+            Console.WriteLine("\t\tInforme a Raça: ");
             Console.Write("\t\t");
             Pessoa.Raca = Console.ReadLine();
 
-            Console.WriteLine("\t\tGênero M ou F: ");
+            Console.WriteLine("\t\tInforme Gênero M/F: ");
             Console.Write("\t\t");
             Pessoa.Genero = Console.ReadLine();
 
-            Console.WriteLine("\t\tEstado Civil: ");
+            Console.WriteLine("\t\tInforme o Estado Civil: ");
             Console.Write("\t\t");
             Pessoa.EStadoCivil = Console.ReadLine();
 
-            Console.WriteLine("\t\tInsira o CPF: ");
+            Console.WriteLine("\t\tInforme o CPF: ");
             Console.Write("\t\t");
             Pessoa.CPF = Console.ReadLine();
 
-            Console.WriteLine("\t\tInsira o RG: ");
+            Console.WriteLine("\t\tInforme o RG: ");
             Console.Write("\t\t");
             Pessoa.RG = Console.ReadLine();
 
@@ -54,14 +83,31 @@ namespace RoteiroPrático003.Models
             }
             else
             {
-                Console.WriteLine("\t\tCPF digitado ja cadastro!");
+                Console.WriteLine("\t\tCPF já cadastro!");
             }
+
             Console.ReadKey();
         }
 
-        private object CPFValidator(string cPF)
+        private object CPFValidator(string cpf)
         {
-            throw new NotImplementedException();
+            foreach (Pessoa pessoa in Cursos)
+            {
+                if (pessoa.CPF == cpf)
+                {
+                    return pessoa;
+                }
+            }
+            return null;
+        }
+
+        public void ListarEstudantes()
+        {
+            foreach (Pessoa pessoa in Cursos)
+            {
+                pessoa.toString();
+            }
+            Console.ReadKey();
         }
     }
 }
